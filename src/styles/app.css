@@ -11,3 +11,22 @@ body {
 #app {
   min-height: 100vh;
 }
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+h2 {
+  font-size: 2.4rem;
+  text-transform: capitalize;
+}
+
+section {
+  min-height: 100vh;
+}
