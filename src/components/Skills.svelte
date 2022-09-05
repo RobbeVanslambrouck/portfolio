@@ -1,49 +1,15 @@
 <script>
-  import html5 from "../assets/html-5.svg";
-  import css3 from "../assets/css-3.svg";
-  import js from "../assets/javascript.svg";
-  import sass from "../assets/sass.svg";
-  import react from "../assets/react.svg";
-  import svelte from "../assets/svelte-icon.svg";
-  import wp from "../assets/webpack.svg";
-  import vite from "../assets/vitejs.svg";
-  import npm from "../assets/npm-icon.svg";
-  import git from "../assets/git-icon.svg";
-  import fig from "../assets/figma.svg";
-  import vsc from "../assets/visual-studio-code.svg";
-  import linux from "../assets/linux-tux.svg";
-  import gg from "../assets/google-icon.svg";
-  import so from "../assets/stackoverflow-icon.svg";
-
-  const tools = [
-    { name: "HTML5", iconUrl: html5 },
-    { name: "CSS3", iconUrl: css3 },
-    { name: "JavaScript", iconUrl: js },
-    { name: "Sass", iconUrl: sass },
-    { name: "React", iconUrl: react },
-    { name: "Svelte", iconUrl: svelte },
-    { name: "Webpack", iconUrl: wp },
-    { name: "Vite", iconUrl: vite },
-    { name: "npm", iconUrl: npm },
-    { name: "git", iconUrl: git },
-    { name: "Figma", iconUrl: fig },
-    { name: "Visual Studio Code", iconUrl: vsc },
-    { name: "linux", iconUrl: linux },
-    { name: "Google", iconUrl: gg },
-    { name: "Stack Overflow", iconUrl: so },
-  ];
+  import skillsJson from "../skills.json";
+  import Skill from "./Skill.svelte";
+  skillsJson.skills;
 </script>
 
-<section class="skills">
+<section class="skills-page">
   <h2>skills</h2>
-  <p>summary...</p>
-  <p>tool i've used</p>
-  <div class="tools">
-    {#each tools as tool}
-      <div class="tool">
-        <img src={tool.iconUrl} alt={tool.name} />
-        <p>{tool.name}</p>
-      </div>
+  <p>These are the tools/technologies I have used to create web apps</p>
+  <div class="skills">
+    {#each skillsJson.skills as skill}
+      <Skill {skill} />
     {/each}
   </div>
 </section>
@@ -57,24 +23,46 @@
     text-transform: capitalize;
   }
 
-  .tools {
+  .skills {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
     gap: 3rem;
   }
 
-  .tool {
+  .skill {
     width: 5rem;
   }
 
-  .tool img {
+  .skill img {
     width: 5rem;
     height: 5rem;
   }
 
-  .tool p {
+  .skill p {
     text-transform: capitalize;
     text-align: center;
+  }
+
+  .skill:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    /* width: max-content; */
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    /* transition: opacity 1s ease-in-out; */
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 110%;
+  }
+
+  .skill:hover:before {
+    opacity: 1;
+    visibility: visible;
   }
 </style>
