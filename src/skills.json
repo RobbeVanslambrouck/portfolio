@@ -2,72 +2,72 @@
   "skills" : [
     {
       "name": "HTML5",
-      "icon": "public/assets/html-5.svg",
+      "icon": "/assets/html-5.svg",
       "tooltip": ""
     },
     {
       "name": "CSS3",
-      "icon": "public/assets/css-3.svg",
+      "icon": "/assets/css-3.svg",
       "tooltip": ""
     },
     {
       "name": "sass",
-      "icon": "public/assets/sass.svg",
+      "icon": "/assets/sass.svg",
       "tooltip": ""
     },
     {
       "name": "JavaScript",
-      "icon": "public/assets/javascript.svg",
+      "icon": "/assets/javascript.svg",
       "tooltip": ""
     },
     {
       "name": "React",
-      "icon": "public/assets/react.svg",
+      "icon": "/assets/react.svg",
       "tooltip": ""
     },
     {
       "name": "svelte",
-      "icon": "public/assets/svelte.svg",
+      "icon": "/assets/svelte.svg",
       "tooltip": "because I like it"
     },
     {
       "name": "npm",
-      "icon": "public/assets/npm-icon.svg",
+      "icon": "/assets/npm-icon.svg",
       "tooltip": ""
     },
     {
       "name": "Webpack",
-      "icon": "public/assets/webpack.svg",
+      "icon": "/assets/webpack.svg",
       "tooltip": ""
     },
     {
       "name": "Vite",
-      "icon": "public/assets/vitejs.svg",
+      "icon": "/assets/vitejs.svg",
       "tooltip": ""
     },
     {
       "name": "Git",
-      "icon": "public/assets/git-icon.svg",
+      "icon": "/assets/git-icon.svg",
       "tooltip": ""
     },
     {
       "name": "VS code",
-      "icon": "public/assets/visual-studio-code.svg",
+      "icon": "/assets/visual-studio-code.svg",
       "tooltip": "should I try vim?"
     },
     {
       "name": "Linux",
-      "icon": "public/assets/linux-tux.svg",
+      "icon": "/assets/linux-tux.svg",
       "tooltip": "PopOs if u must know"
     },
     {
       "name": "Google",
-      "icon": "public/assets/google-icon.svg",
+      "icon": "/assets/google-icon.svg",
       "tooltip": ""
     },
     {
       "name": "stackoverflow",
-      "icon": "public/assets/stackoverflow-icon.svg",
+      "icon": "/assets/stackoverflow-icon.svg",
       "tooltip": "clrl+c clrl+v"
     }
 

@@ -5,14 +5,14 @@
       "description": "draw on a canvas. Made with HTML, css and vanilla javascript",
       "liveLink": "https://robbevanslambrouck.github.io/odin-etch_a_sketch/",
       "codeLink": "https://github.com/RobbeVanslambrouck/odin-etch_a_sketch/",
-      "image": "public/assets/Etch_a_sketch.png"
+      "image": "/assets/Etch_a_sketch.png"
     },
     {
       "name" : "Battleship",
       "description": "Play battleship against my code. This project was made with HTML, sass and javascript all bundled with webpack.",
       "liveLink": "https://robbevanslambrouck.github.io/battleship/",
       "codeLink": "https://github.com/RobbeVanslambrouck/battleship/",
-      "image": "public/assets/battleship.png"
+      "image": "/assets/battleship.png"
     }
   ]
 }
