@@ -10,7 +10,10 @@
   $: inputSize = iframes.length === 0 ? 1 : iframes.length;
 
   $: {
-    if (innerWidth < 800) showLivePages = false;
+    if (innerWidth < 800) {
+      showLivePages = false;
+      iframes = "false";
+    }
   }
 
   $: {
@@ -25,14 +28,17 @@
 <svelte:window bind:innerWidth />
 <section class="page">
   <h2>
-    {"<Projects"} &nbsp &nbsp {"iframes ="}
-    <input
-      name="iframes"
-      type="text"
-      bind:value={iframes}
-      size={inputSize}
-      on:focusout={handleFocusout}
-    />
+    {"<Projects"}
+    {#if innerWidth >= 800}
+      &nbsp &nbsp {"iframes ="}
+      <input
+        name="iframes"
+        type="text"
+        bind:value={iframes}
+        size={inputSize}
+        on:focusout={handleFocusout}
+      />
+    {/if}
     {" />"}
   </h2>
   <div class="projects">
@@ -79,6 +85,7 @@
     font-weight: inherit;
     margin-right: -3.5rem;
     cursor: pointer;
+    background-color: #f1f1f1;
   }
 
   .projects {
@@ -99,8 +106,8 @@
       "img desc"
       "img links";
     padding: 1rem;
-    color: white;
-    background-color: #193fff;
+    color: #f1f1f1;
+    background-color: #21209c;
     box-shadow: 0.1rem 0.4rem 0.4rem #aeaeae;
   }
 
@@ -136,17 +143,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ff3e00;
-    box-shadow: 0 0.4rem #802000;
+    background-color: #fdb827;
+    box-shadow: 0 0.4rem #7d5b13;
     border-radius: 0.5rem;
     font-size: 1.8rem;
     width: 10rem;
     font-weight: 600;
   }
 
+  .link a {
+    color: #21209c;
+    text-decoration: none;
+    margin: 0.5rem 1rem;
+  }
+
   .link:active {
-    box-shadow: inset 0 0.2rem #802000;
-    transform: translate(0.4rem);
+    box-shadow: 0 0.2rem #7d5b13;
+    transform: translate(0.2rem);
   }
 
   .preview {
@@ -158,13 +171,7 @@
   iframe {
     height: 100vh;
     width: 100%;
-    background-color: white;
-  }
-
-  .project a {
-    color: white;
-    text-decoration: none;
-    margin: 0.5rem 1rem;
+    background-color: #f1f1f1;
   }
 
   .toggle {

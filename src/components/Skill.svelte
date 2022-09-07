@@ -65,8 +65,8 @@
 
   .tooltip {
     position: absolute;
-    background-color: black;
-    color: white;
+    background-color: #21209c;
+    color: #f1f1f1;
     border-radius: 0.2rem;
     padding: 0.5rem;
     z-index: 1;

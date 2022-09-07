@@ -6,10 +6,12 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
+  color: #23120B;
 }
 
 #app {
   min-height: 100vh;
+  background-color: #F1F1F1;
 }
 
 .sr-only:not(:focus):not(:active) {
