@@ -13,6 +13,13 @@
       "liveLink": "https://robbevanslambrouck.github.io/battleship/",
       "codeLink": "https://github.com/RobbeVanslambrouck/battleship/",
       "image": "/assets/battleship.png"
+    },
+    {
+      "name" : "Memory card",
+      "description": "How good is your memory? this project is made with react.",
+      "liveLink": "https://robbevanslambrouck.github.io/react-memory-card/",
+      "codeLink": "https://github.com/RobbeVanslambrouck/react-memory-card",
+      "image": "/assets/memory_card.png"
     }
   ]
 }
