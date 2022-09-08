@@ -16,7 +16,7 @@
     },
     {
       "name" : "Memory card",
-      "description": "How good is your memory? this project is made with react.",
+      "description": "How good is your memory? Click the cards that you didn't click yet. This project is made with react.",
       "liveLink": "https://robbevanslambrouck.github.io/react-memory-card/",
       "codeLink": "https://github.com/RobbeVanslambrouck/react-memory-card",
       "image": "/assets/memory_card.png"
