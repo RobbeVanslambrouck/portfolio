@@ -16,10 +16,13 @@
       <div class="icons">
         <a
           href="https://www.linkedin.com/in/robbe-vanslambrouck-281734242/"
-          class="linkedin icon"><p class="sr-only">LinkedIn</p></a
+          class="linkedin icon"
+          target="_blank"><p class="sr-only">LinkedIn</p></a
         >
-        <a href="https://github.com/RobbeVanslambrouck" class="github icon"
-          ><p class="sr-only">github</p></a
+        <a
+          href="https://github.com/RobbeVanslambrouck"
+          target="_blank"
+          class="github icon"><p class="sr-only">github</p></a
         >
       </div>
     </div>
