@@ -91,6 +91,7 @@
   .projects {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 4rem;
   }
 
@@ -109,6 +110,7 @@
     color: #f1f1f1;
     background-color: #21209c;
     box-shadow: 0.1rem 0.4rem 0.4rem #aeaeae;
+    max-width: 80rem;
   }
 
   .project:nth-child(odd) {
@@ -172,18 +174,6 @@
     height: 100vh;
     width: 100%;
     background-color: #f1f1f1;
-  }
-
-  .toggle {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5rem;
-  }
-
-  @media only screen and (max-width: 800px) {
-    .toggle-live-pages {
-      display: none;
-    }
   }
 
   @media only screen and (max-width: 550px) {
