@@ -20,6 +20,13 @@
       "liveLink": "https://robbevanslambrouck.github.io/react-memory-card/",
       "codeLink": "https://github.com/RobbeVanslambrouck/react-memory-card",
       "image": "/assets/memory_card.png"
+    },
+    {
+      "name" : "shopping cart",
+      "description": "some fake store made with react.",
+      "liveLink": "https://RobbeVanslambrouck.github.io/react-shopping-cart/",
+      "codeLink": "https://github.com/RobbeVanslambrouck/react-shopping-cart",
+      "image": "/assets/shopping_cart.png"
     }
   ]
 }
