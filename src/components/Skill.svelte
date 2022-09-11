@@ -28,7 +28,9 @@
     on:mouseleave={handleMouseLeave}
     on:mousemove={handleMouseMove}
   >
-    <img src={skill.icon} alt={skill.name} />
+    <a href={skill.link} target="_blank">
+      <img src={skill.icon} alt={skill.name} />
+    </a>
     <p>{skill.name}</p>
     {#if isHovered}
       <p
@@ -43,7 +45,9 @@
   </div>
 {:else}
   <div class="skill">
-    <img src={skill.icon} alt={skill.name} />
+    <a href={skill.link} target="_blank">
+      <img src={skill.icon} alt={skill.name} />
+    </a>
     <p>{skill.name}</p>
   </div>
 {/if}
@@ -51,6 +55,9 @@
 <style>
   .skill {
     width: 5rem;
+    background-color: #f1f1f1;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
   }
 
   .skill img {

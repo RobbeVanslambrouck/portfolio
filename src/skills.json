@@ -3,72 +3,100 @@
     {
       "name": "HTML5",
       "icon": "/assets/html-5.svg",
-      "tooltip": ""
+      "category": "front-end",
+      "tooltip": "",
+      "link": "https://html.spec.whatwg.org/"
     },
     {
       "name": "CSS3",
       "icon": "/assets/css-3.svg",
-      "tooltip": ""
+      "category": "front-end",
+      "tooltip": "",
+      "link": ""
     },
     {
       "name": "sass",
       "icon": "/assets/sass.svg",
-      "tooltip": ""
+      "category": "front-end",
+      "tooltip": "",
+      "link": ""
     },
     {
       "name": "JavaScript",
       "icon": "/assets/javascript.svg",
-      "tooltip": ""
+      "category": "front-end",
+      "tooltip": "",
+      "link": ""
     },
     {
       "name": "React",
       "icon": "/assets/react.svg",
-      "tooltip": ""
+      "category": "front-end",
+      "tooltip": "",
+      "link": ""
     },
     {
       "name": "svelte",
       "icon": "/assets/svelte.svg",
-      "tooltip": "because I like it"
+      "category": "front-end",
+      "tooltip": "because I like it",
+      "link": ""
     },
     {
       "name": "npm",
       "icon": "/assets/npm-icon.svg",
-      "tooltip": ""
+      "category": "miscellaneous",
+      "tooltip": "",
+      "link": ""
     },
     {
       "name": "Webpack",
       "icon": "/assets/webpack.svg",
-      "tooltip": ""
+      "category": "miscellaneous",
+      "tooltip": "",
+      "link": ""
     },
     {
       "name": "Vite",
       "icon": "/assets/vitejs.svg",
-      "tooltip": ""
+      "category": "miscellaneous",
+      "tooltip": "",
+      "link": ""
     },
     {
       "name": "Git",
       "icon": "/assets/git-icon.svg",
-      "tooltip": ""
+      "category": "miscellaneous",
+      "tooltip": "",
+      "link": ""
     },
     {
       "name": "VS code",
       "icon": "/assets/visual-studio-code.svg",
-      "tooltip": "should I try vim?"
+      "category": "miscellaneous",
+      "tooltip": "should I try vim?",
+      "link": ""
     },
     {
       "name": "Linux",
       "icon": "/assets/linux-tux.svg",
-      "tooltip": "PopOs if u must know"
+      "category": "miscellaneous",
+      "tooltip": "PopOs if u must know",
+      "link": ""
     },
     {
       "name": "Google",
       "icon": "/assets/google-icon.svg",
-      "tooltip": ""
+      "category": "miscellaneous",
+      "tooltip": "",
+      "link": ""
     },
     {
       "name": "stackoverflow",
       "icon": "/assets/stackoverflow-icon.svg",
-      "tooltip": "clrl+c clrl+v"
+      "category": "miscellaneous",
+      "tooltip": "clrl+c clrl+v",
+      "link": ""
     }
 
   ]

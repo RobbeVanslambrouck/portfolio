@@ -1,15 +1,30 @@
 <script>
   import skillsJson from "../skills.json";
   import Skill from "./Skill.svelte";
-  skillsJson.skills;
+  let categories = {};
+  skillsJson.skills.forEach((skill) => {
+    if (categories[skill.category]) {
+      categories[skill.category].push(skill);
+      return;
+    }
+    categories[skill.category] = [skill];
+  });
+  console.log(categories);
 </script>
 
 <section class="skills-page">
   <h2>skills</h2>
   <p>These are the tools/technologies I have used to create web apps</p>
-  <div class="skills">
-    {#each skillsJson.skills as skill}
-      <Skill {skill} />
+  <div class="categories">
+    {#each Object.entries(categories) as [category, skills]}
+      <div class="category">
+        <p>{category}</p>
+        <div class="skills">
+          {#each skills as skill}
+            <Skill {skill} />
+          {/each}
+        </div>
+      </div>
     {/each}
   </div>
 </section>
@@ -23,46 +38,23 @@
     text-transform: capitalize;
   }
 
-  .skills {
+  .categories {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
+    justify-content: center;
     gap: 3rem;
   }
 
-  .skill {
-    width: 5rem;
+  .category {
   }
 
-  .skill img {
-    width: 5rem;
-    height: 5rem;
-  }
-
-  .skill p {
-    text-transform: capitalize;
-    text-align: center;
-  }
-
-  .skill:before {
-    content: attr(data-hover);
-    visibility: hidden;
-    opacity: 0;
-    /* width: max-content; */
-    background-color: black;
-    color: white;
-    text-align: center;
+  .skills {
     border-radius: 0.5rem;
-    padding: 0.5rem;
-    /* transition: opacity 1s ease-in-out; */
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    top: 110%;
-  }
-
-  .skill:hover:before {
-    opacity: 1;
-    visibility: visible;
+    padding: 1rem;
+    background-color: #fdb827;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 </style>
