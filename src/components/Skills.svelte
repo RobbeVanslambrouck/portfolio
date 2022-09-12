@@ -14,11 +14,13 @@
 
 <section class="skills-page">
   <h2>skills</h2>
-  <p>These are the tools/technologies I have used to create web apps</p>
+  <p class="summary">
+    These are the tools/technologies I have used to create web apps
+  </p>
   <div class="categories">
     {#each Object.entries(categories) as [category, skills]}
       <div class="category">
-        <p>{category}</p>
+        <p class="title">{category}</p>
         <div class="skills">
           {#each skills as skill}
             <Skill {skill} />
@@ -38,23 +40,37 @@
     text-transform: capitalize;
   }
 
+  .summary {
+    font-size: 1.6rem;
+  }
+
   .categories {
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
     justify-content: center;
     gap: 3rem;
   }
 
-  .category {
+  .category .title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
   }
 
   .skills {
     border-radius: 0.5rem;
     padding: 1rem;
     background-color: #fdb827;
-    display: flex;
+
+    display: grid;
     gap: 1rem;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media only screen and (min-width: 350px) {
+    .skills {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 </style>

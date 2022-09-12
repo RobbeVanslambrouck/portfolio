@@ -14,43 +14,43 @@
   };
 
   let handleMouseMove = (e) => {
-    x = e.clientX + scrollX + 5;
-    y = e.clientY + scrollY + 5;
+    x = e.clientX + scrollX + 8;
+    y = e.clientY + scrollY + 8;
   };
 </script>
 
 <svelte:window bind:scrollX bind:scrollY />
-{#if skill.tooltip !== ""}
-  <div
-    class="skill"
-    on:mouseover={handleMouseOver}
-    on:focus={handleMouseOver}
-    on:mouseleave={handleMouseLeave}
-    on:mousemove={handleMouseMove}
-  >
+<div
+  class="skill"
+  on:mouseover={handleMouseOver}
+  on:focus={handleMouseOver}
+  on:mouseleave={handleMouseLeave}
+  on:mousemove={handleMouseMove}
+>
+  {#if skill.link === ""}
+    <div>
+      <img src={skill.icon} alt={skill.name} />
+    </div>
+  {:else}
     <a href={skill.link} target="_blank">
       <img src={skill.icon} alt={skill.name} />
     </a>
-    <p>{skill.name}</p>
-    {#if isHovered}
-      <p
-        class="tooltip"
-        style="top: {y}px; left: {x}px"
-        in:fade={{ delay: 500, duration: 500 }}
-        out:fade={{ duration: 500 }}
-      >
+  {/if}
+  {#if isHovered}
+    <p
+      class="tooltip"
+      style="top: {y}px; left: {x}px"
+      in:fade={{ delay: 500, duration: 500 }}
+      out:fade={{ duration: 500 }}
+    >
+      {#if skill.tooltip !== ""}
         {skill.tooltip}
-      </p>
-    {/if}
-  </div>
-{:else}
-  <div class="skill">
-    <a href={skill.link} target="_blank">
-      <img src={skill.icon} alt={skill.name} />
-    </a>
-    <p>{skill.name}</p>
-  </div>
-{/if}
+      {:else}
+        {skill.name}
+      {/if}
+    </p>
+  {/if}
+</div>
 
 <style>
   .skill {
