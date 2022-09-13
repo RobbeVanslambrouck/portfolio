@@ -54,15 +54,16 @@
 
 <style>
   .skill {
-    width: 5rem;
     background-color: #f1f1f1;
     padding: 0.5rem;
     border-radius: 0.5rem;
+    height: auto;
   }
 
   .skill img {
     width: 5rem;
     height: 5rem;
+    transition: all 1s;
   }
 
   .skill p {
@@ -78,5 +79,13 @@
     padding: 0.5rem;
     z-index: 1;
     text-transform: none !important;
+  }
+
+  @media only screen and (min-width: 800px) {
+    .skill img {
+      width: 7rem;
+      height: 7rem;
+      transition: all 1s;
+    }
   }
 </style>

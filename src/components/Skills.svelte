@@ -14,9 +14,6 @@
 
 <section class="skills-page">
   <h2>skills</h2>
-  <p class="summary">
-    These are the tools/technologies I have used to create web apps
-  </p>
   <div class="categories">
     {#each Object.entries(categories) as [category, skills]}
       <div class="category">
@@ -33,15 +30,7 @@
 
 <style>
   section {
-    height: 100vh;
-  }
-  h2 {
-    font-size: 2.4rem;
-    text-transform: capitalize;
-  }
-
-  .summary {
-    font-size: 1.6rem;
+    min-height: 90vh;
   }
 
   .categories {
