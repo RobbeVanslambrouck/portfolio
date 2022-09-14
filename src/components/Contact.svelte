@@ -1,6 +1,6 @@
 <script></script>
 
-<section class="contact page">
+<section class="contact page" id="contact">
   <h2 class="sr-only">contact</h2>
 
   <div class="contact-links">

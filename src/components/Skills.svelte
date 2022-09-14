@@ -12,7 +12,7 @@
   console.log(categories);
 </script>
 
-<section class="skills-page">
+<section class="skills-page" id="skills">
   <h2>skills</h2>
   <div class="categories">
     {#each Object.entries(categories) as [category, skills]}

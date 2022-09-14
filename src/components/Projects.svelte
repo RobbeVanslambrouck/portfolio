@@ -26,7 +26,7 @@
 </script>
 
 <svelte:window bind:innerWidth />
-<section class="page">
+<section class="page" id="projects">
   <h2>
     {"<Projects"}
     {#if innerWidth >= 800}

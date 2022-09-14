@@ -3,7 +3,7 @@
   import Typewriter from "svelte-typewriter";
 </script>
 
-<section class="hero">
+<section class="hero" id="home">
   <h2 class="sr-only">hero</h2>
   <Typewriter interval={80} wordInterval={2000} mode="loopRandom" cursor={true}>
     <p>frontend developer</p>
