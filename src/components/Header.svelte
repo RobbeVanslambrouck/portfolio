@@ -1,24 +1,48 @@
 <script>
+  import { inview } from "../stores";
 </script>
 
 <header>
   <h1 class="sr-only"><a href="/">robbe vanslambrouck</a></h1>
   <nav>
     <ul>
-      <li><a href="#home">home</a></li>
-      <li><a href="#about">about</a></li>
-      <li><a href="#skills">skills</a></li>
-      <li><a href="#projects">Project</a></li>
-      <li><a href="#contact">contact</a></li>
+      <li>
+        <a
+          href="#home"
+          class={$inview.find((e) => e === "hero") ? "active" : ""}>home</a
+        >
+      </li>
+      <li>
+        <a
+          href="#about"
+          class={$inview.find((e) => e === "about") ? "active" : ""}>about</a
+        >
+      </li>
+      <li>
+        <a
+          href="#skills"
+          class={$inview.find((e) => e === "skills") ? "active" : ""}>skills</a
+        >
+      </li>
+      <li>
+        <a
+          href="#projects"
+          class={$inview.find((e) => e === "projects") ? "active" : ""}
+          >projects</a
+        >
+      </li>
+      <li>
+        <a
+          href="#contact"
+          class={$inview.find((e) => e === "contact") ? "active" : ""}
+          >contact</a
+        >
+      </li>
     </ul>
   </nav>
 </header>
 
 <style>
-  :root {
-    --header-height: 4rem;
-  }
-
   header {
     background-color: #f1f1f1;
   }
@@ -46,7 +70,11 @@
     text-decoration: underline;
   }
 
-  @media only screen and (min-width: 600px) {
+  .active {
+    color: #21209c;
+  }
+
+  @media only screen and (min-width: 500px) {
     header {
       position: sticky;
       left: 0;

@@ -1,4 +1,6 @@
 <script>
+  import { inview, addInview, removeInview } from "../stores";
+  import viewport from "../useViewportAction";
   import skillsJson from "../skills.json";
   import Skill from "./Skill.svelte";
   let categories = {};
@@ -9,10 +11,22 @@
     }
     categories[skill.category] = [skill];
   });
-  console.log(categories);
+
+  const handleEnterViewport = () => {
+    addInview("skills");
+  };
+  const handleExitViewport = () => {
+    removeInview("skills");
+  };
 </script>
 
-<section class="skills-page" id="skills">
+<section
+  class="skills-page"
+  id="skills"
+  use:viewport
+  on:enterViewport={handleEnterViewport}
+  on:exitViewport={handleExitViewport}
+>
   <h2>skills</h2>
   <div class="categories">
     {#each Object.entries(categories) as [category, skills]}

@@ -1,6 +1,22 @@
-<script></script>
+<script>
+  import { inview, addInview, removeInview } from "../stores";
+  import viewport from "../useViewportAction";
 
-<section class="contact page" id="contact">
+  const handleEnterViewport = () => {
+    addInview("contact");
+  };
+  const handleExitViewport = () => {
+    removeInview("contact");
+  };
+</script>
+
+<section
+  class="contact page"
+  id="contact"
+  use:viewport
+  on:enterViewport={handleEnterViewport}
+  on:exitViewport={handleExitViewport}
+>
   <h2 class="sr-only">contact</h2>
 
   <div class="contact-links">

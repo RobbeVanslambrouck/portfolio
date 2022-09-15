@@ -1,8 +1,7 @@
 <script>
-  import { handle_promise } from "svelte/internal";
-
+  import viewport from "../useViewportAction";
+  import { inview, addInview, removeInview } from "../stores";
   import projectsJson from "../projects.json";
-  console.log(projectsJson.projects);
 
   let showLivePages = false;
   let innerWidth;
@@ -17,16 +16,33 @@
   }
 
   $: {
+    console.log($inview);
+  }
+
+  $: {
     showLivePages = iframes === "true";
   }
 
   const handleFocusout = () => {
     if (iframes !== "true") iframes = "false";
   };
+
+  const handleEnterViewport = () => {
+    addInview("projects");
+  };
+  const handleExitViewport = () => {
+    removeInview("projects");
+  };
 </script>
 
 <svelte:window bind:innerWidth />
-<section class="page" id="projects">
+<section
+  class="page"
+  id="projects"
+  use:viewport
+  on:enterViewport={handleEnterViewport}
+  on:exitViewport={handleExitViewport}
+>
   <h2>
     {"<Projects"}
     {#if innerWidth >= 800}

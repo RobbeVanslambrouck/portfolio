@@ -1,15 +1,27 @@
-<script></script>
+<script>
+  import { inview, addInview, removeInview } from "../stores";
+  import viewport from "../useViewportAction";
 
-<section class="about" id="about">
+  const handleEnterViewport = () => {
+    addInview("about");
+  };
+  const handleExitViewport = () => {
+    removeInview("about");
+  };
+</script>
+
+<section
+  class="about page"
+  id="about"
+  use:viewport
+  on:enterViewport={handleEnterViewport}
+  on:exitViewport={handleExitViewport}
+>
   <h2>about me</h2>
   <p>summary</p>
 </section>
 
 <style>
-  section {
-    min-height: 100vh;
-  }
-
   p {
     font-size: 1.8rem;
   }
