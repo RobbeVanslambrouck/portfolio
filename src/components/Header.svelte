@@ -1,10 +1,19 @@
 <script>
   import { inview } from "../stores";
+  let width = 0;
+
+  $: isMenuvisible = width >= 500;
+
+  $: console.log(width);
 </script>
+<svelte:window bind:innerWidth={width}/>
 
 <header>
   <h1 class="sr-only"><a href="/">robbe vanslambrouck</a></h1>
-  <nav>
+  {#if width < 500}
+  <button on:click={() => isMenuvisible = !isMenuvisible}><p class="sr-only">show navigation menu</p></button>
+  {/if}
+  <nav class={isMenuvisible ? "" : "sr-only"}>
     <ul>
       <li>
         <a
@@ -45,6 +54,9 @@
 <style>
   header {
     background-color: #f1f1f1;
+    position: sticky;
+    left: 0;
+    top: 0;
   }
 
   nav ul {
