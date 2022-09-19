@@ -10,11 +10,17 @@
 
 <header>
   <h1 class="sr-only"><a href="/">robbe vanslambrouck</a></h1>
-  {#if width < 500}
-  <button on:click={() => isMenuvisible = !isMenuvisible}><p class="sr-only">show navigation menu</p></button>
-  {/if}
-  <nav class={isMenuvisible ? "" : "sr-only"}>
-    <ul>
+  <nav>
+    {#if width < 500}
+    <div id="nav-toggle">
+      <label class="sr-only" for="nav-checkbox">show navigation</label>
+      <input name="nav-checkbox" id="nav-checkbox" type="checkbox" bind:checked={isMenuvisible}/>
+      <span />
+      <span />
+      <span />
+    </div>
+    {/if}
+    <ul class={isMenuvisible ? "" : "sr-only"}>
       <li>
         <a
           href="#home"
@@ -58,6 +64,79 @@
     left: 0;
     top: 0;
   }
+
+  #nav-toggle {
+    display: block;
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #nav-checkbox {
+    display: block;
+    width: 4rem;
+    height: 3.2rem;
+    position: absolute;
+    top: -0.7rem;
+    left: -0.5rem;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+  }
+
+  #nav-toggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #fdb827;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#nav-toggle span:first-child
+{
+  transform-origin: 0% 100%;
+}
+
+#nav-toggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#nav-toggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(0px, -1px);
+  background: #21209c;
+}
+
+#nav-toggle input:checked ~ span:nth-last-child(2)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0, 0.5);
+}
+
+#nav-toggle input:checked ~ span:nth-last-child(1)
+{
+  transform: rotate(-45deg) translate(-1px, -2px);
+}
 
   nav ul {
     display: flex;
