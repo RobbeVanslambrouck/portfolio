@@ -1,10 +1,11 @@
 <script>
   import { inview } from "../stores";
+  import { scale } from 'svelte/transition';
+
   let width = 0;
 
   $: isMenuvisible = width >= 500;
 
-  $: console.log(width);
 </script>
 <svelte:window bind:innerWidth={width}/>
 
@@ -20,7 +21,7 @@
       <span />
     </div>
     {/if}
-    <ul class={isMenuvisible ? "" : "sr-only"}>
+    <ul class={isMenuvisible ? "" : "hide-menu"}>
       <li>
         <a
           href="#home"
@@ -59,7 +60,7 @@
 
 <style>
   header {
-    background-color: #f1f1f1;
+    background-color: none;
     position: sticky;
     left: 0;
     top: 0;
@@ -70,7 +71,7 @@
     position: relative;
     top: 2rem;
     left: 2rem;
-
+    height: 0;
     z-index: 1;
 
     -webkit-user-select: none;
@@ -122,15 +123,19 @@
 
 #nav-toggle input:checked ~ span
 {
+  background: #21209c;
+}
+
+#nav-toggle input:checked ~ span:nth-last-child(3)
+{
   opacity: 1;
   transform: rotate(45deg) translate(0px, -1px);
-  background: #21209c;
 }
 
 #nav-toggle input:checked ~ span:nth-last-child(2)
 {
   opacity: 0;
-  transform: rotate(0deg) scale(0, 0.5);
+  transform: rotate(0deg) scale(0, 0.1) translate(0, -2px);
 }
 
 #nav-toggle input:checked ~ span:nth-last-child(1)
@@ -139,12 +144,33 @@
 }
 
   nav ul {
+    position: relative;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
     text-align: center;
+    box-shadow: 4px 4px 10px 10px #e1e1e1;
+    transition: all 0.55s ease;
+    background-color: #f1f1f1;
+
   }
+
+  nav li {
+    height: 4rem;
+    border-bottom: 1px solid #fdb827;
+  }
+
+  nav li:nth-child(1) {
+    margin-top: 4rem;
+  }
+
+  .hide-menu:not(:focus):not(:active) {
+    transform: translate(-100vw, 0);
+    opacity: 0;
+}
 
   a {
     display: block;
@@ -152,8 +178,7 @@
     text-transform: capitalize;
     font-size: 1.8rem;
     color: black;
-    border-bottom: 1px solid #fdb827;
-    padding: 1rem;
+    line-height: 4rem;
   }
 
   a:hover {
@@ -180,6 +205,15 @@
       align-items: center;
     }
 
+    nav li {
+    height: fit-content;
+    border-bottom: none;
+  }
+
+  nav li:nth-child(1) {
+    margin-top: 0;
+  }
+
     a {
       display: block;
       text-decoration: none;
@@ -188,6 +222,7 @@
       color: black;
       border-bottom: none;
       padding: 1rem;
+      line-height: normal;
     }
   }
 </style>
