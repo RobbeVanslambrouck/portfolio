@@ -47,7 +47,9 @@
 
 <style>
   .page {
-    min-height: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
   }
 
   .contact-links {
@@ -57,7 +59,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: calc(100vh / 2) 0;
   }
 
   .title {
@@ -71,6 +72,14 @@
   .github {
     font-size: 2.4rem;
     color: #21209c;
+  }
+
+  .email-link {
+    text-decoration: none;
+  }
+
+  .email-link:hover {
+    text-decoration: underline;
   }
 
   .icons {
