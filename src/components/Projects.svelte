@@ -16,10 +16,6 @@
   }
 
   $: {
-    console.log($inview);
-  }
-
-  $: {
     showLivePages = iframes === "true";
   }
 

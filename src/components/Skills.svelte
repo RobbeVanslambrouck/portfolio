@@ -44,7 +44,7 @@
 
 <style>
   section {
-    min-height: 90vh;
+    min-height: 80vh;
   }
 
   .categories {
