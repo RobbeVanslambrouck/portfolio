@@ -18,10 +18,15 @@
   on:exitViewport={handleExitViewport}
 >
   <h2>about me</h2>
-  <p>summary</p>
+  <p>hi, my name is Robbe Vanslambrouck and I am a self taught front-end developer with a passion for learning, functional design and technology</p>
+  <p>I am currently available for hire</p>
 </section>
 
 <style>
+
+  .page {
+    min-height: 40vh;
+  }
   p {
     font-size: 1.8rem;
   }
