@@ -18,8 +18,10 @@
   on:exitViewport={handleExitViewport}
 >
   <h2>about me</h2>
-  <p>hi, my name is Robbe Vanslambrouck and I am a self taught front-end developer with a passion for learning, functional design and technology</p>
-  <p>I am currently available for hire</p>
+  <div id="content">
+    <img src="" alt="selfie" />
+    <p>Hi, my name is Robbe Vanslambrouck and I am a self taught front-end developer with a passion for learning, functional design and technology. I am currently available for hire</p>
+  </div>
 </section>
 
 <style>
@@ -29,5 +31,35 @@
   }
   p {
     font-size: 1.8rem;
+  }
+
+  #content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  #content img {
+    min-width: 10rem;
+    width: 30%;
+    max-width: 20rem;
+  }
+
+  #content p {
+    line-height: 2.2rem;
+    text-align: center;
+    max-width: 60rem;
+  }
+  
+  @media only screen and (min-width: 500px) {
+    #content {
+      flex-direction: row;
+    }
+    #content p {
+      text-align: justify;
+    } 
+
   }
 </style>
