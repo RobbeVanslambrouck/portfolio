@@ -25,47 +25,74 @@
     <a
       href="https://www.linkedin.com/in/robbe-vanslambrouck-281734242/"
       class="linkedin icon"
-      target="_blank"><p class="sr-only">LinkedIn</p></a
+      target="_blank"><img src="assets/linkedin-icon.svg" alt=""></a
     >
     <a
       href="https://github.com/RobbeVanslambrouck"
       target="_blank"
-      class="github icon"><p class="sr-only">github</p></a
+      class="github icon"><img src="assets/github-icon.svg" alt=""></a
     >
-    <a href="mailto:robbevsb.dev@gmail.com" class="gmail"
-    ><p class="sr-only">robbevsb.dev@gmail.com</p></a>
+    <a href="mailto:robbevsb.dev@gmail.com" class="gmail icon"
+    ><img src="assets/google-gmail.svg" alt=""></a>
   </div>
 </section>
 
 <style>
   section {
-    min-height: calc(100vh - 7rem);
+    min-height: calc(60vh);
+    display: grid;
+    grid-template-rows: repeat(5, 1fr) ;
+    grid-template-areas: "name" "title" "." "icons" ".";
+    gap: 1rem;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  #name {
+    grid-area: name;
+    align-self: end;
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  #job-title {
+    grid-area: title;
+    font-size: 2rem;
+    text-transform: uppercase;
   }
 
   .icons {
+    justify-self: center;
+    grid-area: icons;
     display: flex;
     gap: 1rem;
   }
 
   .icon {
-    width: 5rem;
-    height: 5rem;
-    background-color: #fdb827;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
     border-radius: 0.5rem;
+    background-color: #d1d1d1;
   }
 
-  .gmail {
-    background: url("/assets/Gmail-icon.svg");
-    background-size: 5rem 5rem;
+  .icon img {
+    width: 4rem;
+    object-fit: contain;
+    background-color: #d1d1d1;
   }
 
-  .linkedin {
-    background: url("/assets/linkedin-icon.svg");
-    background-size: 5rem;
+  .github img {
+    border-radius: 50%;
   }
 
-  .github {
-    background: url("/assets/github-icon.svg");
-    background-size: 5rem;
+  .icon:hover {
+    transform: scale(1.05);
+    box-shadow: 0.4rem 0.4rem 0.5rem #a1a1a1;
   }
 </style>
