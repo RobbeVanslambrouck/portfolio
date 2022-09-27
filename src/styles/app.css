@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 html {
   font-size: 62.5%;
@@ -6,22 +6,22 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  color: #23120B;
+  font-family: "Roboto", sans-serif;
+  color: #23120b;
 }
 
 #app {
   min-height: 100vh;
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
 }
 
 .sr-only:not(:focus):not(:active) {
-  clip: rect(0 0 0 0); 
+  clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
   position: absolute;
-  white-space: nowrap; 
+  white-space: nowrap;
   width: 1px;
 }
 

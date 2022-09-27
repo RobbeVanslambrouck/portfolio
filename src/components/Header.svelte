@@ -72,6 +72,7 @@
     top: 2rem;
     left: 2rem;
     height: 0;
+    width: 0;
     z-index: 1;
 
     -webkit-user-select: none;
@@ -186,8 +187,6 @@
   @media only screen and (min-width: 500px) {
     header {
       position: sticky;
-      left: 0;
-      top: 0;
       box-shadow: 4px 4px 10px 10px #e1e1e1;
     }
 
