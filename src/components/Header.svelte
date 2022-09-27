@@ -91,57 +91,51 @@
     -webkit-touch-callout: none;
   }
 
-  #nav-toggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  background: #fdb827;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
+  #nav-toggle span {
+    display: block;
+    width: 3.3rem;
+    height: 0.4rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    position: relative;
 
-#nav-toggle span:first-child
-{
-  transform-origin: 0% 100%;
-}
+    background: #fdb827;
+    border-radius: 0.3rem;
 
-#nav-toggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
+    z-index: 1;
 
-#nav-toggle input:checked ~ span
-{
-  background: #21209c;
-}
+    transform-origin: 0.4rem 0;
 
-#nav-toggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(0px, -1px);
-}
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
 
-#nav-toggle input:checked ~ span:nth-last-child(2)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0, 0.1) translate(0, -2px);
-}
+  #nav-toggle span:first-child {
+    transform-origin: 0% 100%;
+  }
 
-#nav-toggle input:checked ~ span:nth-last-child(1)
-{
-  transform: rotate(-45deg) translate(-1px, -2px);
-}
+  #nav-toggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  #nav-toggle input:checked ~ span {
+    background: #21209c;
+  }
+
+  #nav-toggle input:checked ~ span:nth-last-child(3) {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, -1px);
+  }
+
+  #nav-toggle input:checked ~ span:nth-last-child(2) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0, 0.1) translate(0, -2px);
+  }
+
+  #nav-toggle input:checked ~ span:nth-last-child(1) {
+    transform: rotate(-45deg) translate(-1px, -2px);
+  }
 
   nav ul {
     position: relative;
@@ -155,7 +149,6 @@
     box-shadow: 4px 4px 10px 10px #e1e1e1;
     transition: all 0.55s ease;
     background-color: #f1f1f1;
-
   }
 
   nav li {
@@ -170,7 +163,7 @@
   .hide-menu:not(:focus):not(:active) {
     transform: translate(-100vw, 0);
     opacity: 0;
-}
+  }
 
   a {
     display: block;
@@ -208,11 +201,11 @@
     nav li {
     height: fit-content;
     border-bottom: none;
-  }
+   }
 
-  nav li:nth-child(1) {
-    margin-top: 0;
-  }
+    nav li:nth-child(1) {
+      margin-top: 0;
+    }
 
     a {
       display: block;
