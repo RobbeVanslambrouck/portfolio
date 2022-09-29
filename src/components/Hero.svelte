@@ -25,15 +25,16 @@
     <a
       href="https://www.linkedin.com/in/robbe-vanslambrouck-281734242/"
       class="linkedin icon"
-      target="_blank"><img src="assets/linkedin-icon.svg" alt=""></a
+      target="_blank"><img src="assets/linkedin-icon.svg" alt="" /></a
     >
     <a
       href="https://github.com/RobbeVanslambrouck"
       target="_blank"
-      class="github icon"><img src="assets/github-icon.svg" alt=""></a
+      class="github icon"><img src="assets/github-icon.svg" alt="" /></a
     >
     <a href="mailto:robbevsb.dev@gmail.com" class="gmail icon"
-    ><img src="assets/google-gmail.svg" alt=""></a>
+      ><img src="assets/google-gmail.svg" alt="" /></a
+    >
   </div>
 </section>
 
@@ -41,7 +42,7 @@
   section {
     min-height: calc(60vh);
     display: grid;
-    grid-template-rows: repeat(5, 1fr) ;
+    grid-template-rows: repeat(5, 1fr);
     grid-template-areas: "name" "title" "." "icons" ".";
     gap: 1rem;
   }

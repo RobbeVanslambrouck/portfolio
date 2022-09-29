@@ -20,12 +20,15 @@
   <h2>about me</h2>
   <div id="content">
     <img src="" alt="selfie" />
-    <p>Hi, my name is Robbe Vanslambrouck and I am a self taught front-end developer with a passion for learning, functional design and technology. I am currently available for hire</p>
+    <p>
+      Hi, my name is Robbe Vanslambrouck and I am a self taught front-end
+      developer with a passion for learning, functional design and technology. I
+      am currently available for hire
+    </p>
   </div>
 </section>
 
 <style>
-
   .page {
     min-height: 40vh;
   }
@@ -52,14 +55,13 @@
     text-align: center;
     max-width: 60rem;
   }
-  
+
   @media only screen and (min-width: 500px) {
     #content {
       flex-direction: row;
     }
     #content p {
       text-align: justify;
-    } 
-
+    }
   }
 </style>

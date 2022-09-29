@@ -1,25 +1,30 @@
 <script>
   import { inview } from "../stores";
-  import { scale } from 'svelte/transition';
+  import { scale } from "svelte/transition";
 
   let width = 0;
 
   $: isMenuvisible = width >= 500;
-
 </script>
-<svelte:window bind:innerWidth={width}/>
+
+<svelte:window bind:innerWidth={width} />
 
 <header>
   <h1 class="sr-only"><a href="/">robbe vanslambrouck</a></h1>
   <nav>
     {#if width < 500}
-    <div id="nav-toggle">
-      <label class="sr-only" for="nav-checkbox">show navigation</label>
-      <input name="nav-checkbox" id="nav-checkbox" type="checkbox" bind:checked={isMenuvisible}/>
-      <span />
-      <span />
-      <span />
-    </div>
+      <div id="nav-toggle">
+        <label class="sr-only" for="nav-checkbox">show navigation</label>
+        <input
+          name="nav-checkbox"
+          id="nav-checkbox"
+          type="checkbox"
+          bind:checked={isMenuvisible}
+        />
+        <span />
+        <span />
+        <span />
+      </div>
     {/if}
     <ul class={isMenuvisible ? "" : "hide-menu"}>
       <li>
@@ -107,9 +112,8 @@
 
     transform-origin: 0.4rem 0;
 
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                opacity 0.55s ease;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
   }
 
   #nav-toggle span:first-child {
@@ -198,9 +202,9 @@
     }
 
     nav li {
-    height: fit-content;
-    border-bottom: none;
-   }
+      height: fit-content;
+      border-bottom: none;
+    }
 
     nav li:nth-child(1) {
       margin-top: 0;
