@@ -27,7 +27,7 @@
       >
     </div>
 
-    <div>
+    <div style="--icon-size: 9.5vw">
       <p class="socials title">You can also find me here</p>
       <div class="icons">
         <a
@@ -62,7 +62,7 @@
   }
 
   .title {
-    font-size: 3rem;
+    font-size: 8.2vw;
     font-weight: 600;
     margin-bottom: 0.6rem;
   }
@@ -70,7 +70,7 @@
   .email-link,
   .linkedin,
   .github {
-    font-size: 2.4rem;
+    font-size: 5.7vw;
     color: #21209c;
   }
 
@@ -91,8 +91,8 @@
   .icon {
     content: "";
     display: block;
-    width: 4rem;
-    height: 4rem;
+    width: var(--icon-size);
+    height: var(--icon-size);
   }
 
   .icon:hover {
@@ -101,12 +101,12 @@
 
   .linkedin {
     background: url("/assets/linkedin-icon.svg");
-    background-size: 4rem 4rem;
+    background-size: var(--icon-size) var(--icon-size);
   }
 
   .github {
     background: url("/assets/github-icon.svg");
-    background-size: 4rem 4rem;
+    background-size: var(--icon-size) var(--icon-size);
   }
 
   @media only screen and (min-width: 600px) {

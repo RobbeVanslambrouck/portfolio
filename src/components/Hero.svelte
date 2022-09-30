@@ -54,14 +54,14 @@
   #name {
     grid-area: name;
     align-self: end;
-    font-size: 3rem;
+    font-size: 10vw;
     font-weight: 600;
     text-transform: uppercase;
   }
 
   #job-title {
     grid-area: title;
-    font-size: 2rem;
+    font-size: 5.7vw;
     text-transform: uppercase;
   }
 
@@ -95,5 +95,15 @@
   .icon:hover {
     transform: scale(1.05);
     box-shadow: 0.4rem 0.4rem 0.5rem #a1a1a1;
+  }
+
+  @media screen and (min-width: 450px) {
+    #name {
+      font-size: 4.5rem;
+    }
+
+    #job-title {
+      font-size: 2.5rem;
+    }
   }
 </style>

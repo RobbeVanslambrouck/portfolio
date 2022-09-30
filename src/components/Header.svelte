@@ -197,7 +197,7 @@
     nav ul {
       display: flex;
       flex-direction: row;
-      justify-content: flex-end;
+      justify-content: flex-start;
       align-items: center;
     }
 
