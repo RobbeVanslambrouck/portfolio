@@ -41,6 +41,8 @@
 <style>
   section {
     min-height: calc(60vh);
+    max-width: 80rem;
+    margin: 0 auto;
     display: grid;
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas: "name" "title" "." "icons" ".";

@@ -31,6 +31,8 @@
 <style>
   .page {
     min-height: 40vh;
+    max-width: 80rem;
+    margin: 0 auto;
   }
   p {
     font-size: 1.8rem;

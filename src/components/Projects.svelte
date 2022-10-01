@@ -86,6 +86,10 @@
 </section>
 
 <style>
+  .page {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
   h2 {
     font-weight: 600;
     text-transform: none;

@@ -45,6 +45,8 @@
 <style>
   section {
     min-height: 80vh;
+    max-width: 80rem;
+    margin: 0 auto;
   }
 
   .categories {
