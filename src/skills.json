@@ -1,5 +1,5 @@
 {
-  "skills" : [
+  "skills": [
     {
       "name": "HTML5",
       "icon": "/assets/html-5.svg",
@@ -27,6 +27,13 @@
       "category": "front-end",
       "tooltip": "",
       "link": "https://www.javascript.com/"
+    },
+    {
+      "name": "TypeScript",
+      "icon": "/assets/typescript-icon.svg",
+      "category": "front-end",
+      "tooltip": "",
+      "link": "https://www.typescriptlang.org/"
     },
     {
       "name": "React",
@@ -64,6 +71,13 @@
       "link": "https://vitejs.dev/"
     },
     {
+      "name": "Firebase",
+      "icon": "/assets/firebase.svg",
+      "category": "miscellaneous",
+      "tooltip": "",
+      "link": "https://firebase.google.com/"
+    },
+    {
       "name": "Git",
       "icon": "/assets/git-icon.svg",
       "category": "miscellaneous",
@@ -98,6 +112,5 @@
       "tooltip": "clrl+c clrl+v",
       "link": "https://stackoverflow.com/"
     }
-
   ]
 }
