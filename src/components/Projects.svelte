@@ -161,18 +161,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fdb827;
-    box-shadow: 0 0.4rem #7d5b13;
+    background-color: #fdb927;
+    box-shadow: 0rem 0.4rem #7d5b13;
     border-radius: 0.5rem;
     font-size: 1.8rem;
     width: 10rem;
     font-weight: 600;
   }
 
+  .link:hover {
+    background-color: #f2ff40;
+
+    box-shadow: 0 0.2rem 4rem #f2ff40, 0rem 0.4rem #7d5b13;
+  }
+
   .link a {
     color: #21209c;
     text-decoration: none;
-    margin: 0.5rem 1rem;
+    padding: 0.5rem 1rem;
   }
 
   .link:active {

@@ -14,8 +14,8 @@
   };
 
   let handleMouseMove = (e) => {
-    x = e.clientX + scrollX + 8;
-    y = e.clientY + scrollY + 8;
+    x = e.clientX + 8;
+    y = e.clientY + 8;
   };
 </script>
 
@@ -55,6 +55,7 @@
 <style>
   .skill {
     background-color: #f1f1f1;
+    box-shadow: 0.2rem 0.2rem 0.5rem #a1a1a1;
     padding: 0.5rem;
     border-radius: 0.5rem;
     height: auto;
@@ -71,8 +72,12 @@
     text-align: center;
   }
 
+  .skill:hover {
+    box-shadow: 0.4rem 0.4rem 0.5rem #a1a1a1;
+  }
+
   .tooltip {
-    position: absolute;
+    position: fixed;
     background-color: #21209c;
     color: #f1f1f1;
     border-radius: 0.2rem;

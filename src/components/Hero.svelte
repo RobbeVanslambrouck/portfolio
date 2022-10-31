@@ -83,6 +83,7 @@
     height: 6rem;
     border-radius: 0.5rem;
     background-color: #d1d1d1;
+    box-shadow: 0.2rem 0.2rem 0.5rem #a1a1a1;
   }
 
   .icon img {

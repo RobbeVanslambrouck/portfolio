@@ -192,12 +192,14 @@
   }
 
   a:hover {
-    color: #21209c;
+    color: #4d4dff;
+    text-shadow: 0rem 0rem 1.5rem #4d4dff;
     text-decoration: underline;
   }
 
   .active {
     color: #21209c;
+    /* text-shadow: 0rem 0rem 1.5rem #21209c; */
   }
 
   @media only screen and (min-width: 500px) {

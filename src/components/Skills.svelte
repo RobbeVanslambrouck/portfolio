@@ -53,24 +53,37 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: stretch;
     gap: 3rem;
+  }
+
+  .category {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
   }
 
   .category .title {
     font-size: 2.2rem;
     font-weight: 600;
-    text-align: center;
     text-transform: capitalize;
   }
 
   .skills {
+    flex: auto;
     border-radius: 0.5rem;
     padding: 1rem;
+    padding-bottom: auto;
     background-color: #fdb827;
+    box-shadow: 0.4rem 0.4rem 0.5rem #a1a1a1;
 
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: min-content;
+    align-items: center;
   }
 
   @media only screen and (min-width: 350px) {

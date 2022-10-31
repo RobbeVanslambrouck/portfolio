@@ -70,6 +70,8 @@
     height: 4rem;
     line-height: 4rem;
     background-color: #fdb827;
+    box-shadow: 0rem 0.2rem #7d5b13;
+
     border: none;
     border-radius: 50%;
     font-size: 2rem;
@@ -77,6 +79,11 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+  }
+
+  .scroll-to-top:hover {
+    background-color: #f2ff40;
+    box-shadow: 0 0.2rem 4rem #f2ff40, 0rem 0.4rem #7d5b13;
   }
 
   .scroll-to-top svg {
