@@ -1,10 +1,9 @@
 <script>
   import { inview } from "../stores";
-  import { scale } from "svelte/transition";
 
   let width = 0;
 
-  $: isMenuvisible = width >= 500;
+  $: isMenuVisible = width >= 500;
 </script>
 
 <svelte:window bind:innerWidth={width} />
@@ -19,14 +18,21 @@
           name="nav-checkbox"
           id="nav-checkbox"
           type="checkbox"
-          bind:checked={isMenuvisible}
+          bind:checked={isMenuVisible}
         />
         <span />
         <span />
         <span />
       </div>
     {/if}
-    <ul class={isMenuvisible ? "" : "hide-menu"}>
+    <ul
+      class={isMenuVisible ? "" : "hide-menu"}
+      on:click={() => {
+        if (width <= 500) {
+          isMenuVisible = false;
+        }
+      }}
+    >
       <li>
         <a
           href="#home"
@@ -66,16 +72,22 @@
 <style>
   header {
     background-color: none;
-    position: sticky;
+    position: fixed;
     left: 0;
     top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  nav {
+    height: 0px;
   }
 
   #nav-toggle {
     display: block;
-    position: relative;
-    top: 2rem;
-    left: 2rem;
+    position: fixed;
+    top: 1.15rem;
+    right: 4.65rem;
     height: 0;
     width: 0;
     z-index: 1;
@@ -86,10 +98,10 @@
 
   #nav-checkbox {
     display: block;
-    width: 4rem;
+    width: 3.5rem;
     height: 3.2rem;
     position: absolute;
-    top: -0.7rem;
+    top: -0.8rem;
     left: -0.5rem;
     cursor: pointer;
     opacity: 0;
@@ -166,7 +178,7 @@
   }
 
   .hide-menu:not(:focus):not(:active) {
-    transform: translate(-100vw, 0);
+    transform: translate(-100%, 0%);
     opacity: 0;
   }
 
@@ -190,7 +202,6 @@
 
   @media only screen and (min-width: 500px) {
     header {
-      position: sticky;
       box-shadow: 4px 4px 10px 10px #e1e1e1;
     }
 
