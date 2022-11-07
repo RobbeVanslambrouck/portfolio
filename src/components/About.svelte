@@ -1,12 +1,13 @@
 <script>
-  import { inview, addInview, removeInview } from "../stores";
-  import viewport from "../useViewportAction";
+  import { inview, addInview, removeInview } from '../stores';
+  import viewport from '../useViewportAction';
+  import mugshot from '../assets/mugshot.jpg';
 
   const handleEnterViewport = () => {
-    addInview("about");
+    addInview('about');
   };
   const handleExitViewport = () => {
-    removeInview("about");
+    removeInview('about');
   };
 </script>
 
@@ -17,9 +18,9 @@
   on:enterViewport={handleEnterViewport}
   on:exitViewport={handleExitViewport}
 >
-  <h2>about me</h2>
+  <h2>{'<about-me />'}</h2>
   <div id="content">
-    <img src="" alt="selfie" />
+    <img src={mugshot} alt="selfie" />
     <p>
       Hi, my name is Robbe Vanslambrouck and I am a self taught front-end
       developer with a passion for learning, functional design and technology. I
@@ -36,6 +37,10 @@
   }
   p {
     font-size: 1.8rem;
+  }
+
+  img {
+    border-radius: 0.5rem;
   }
 
   #content {
