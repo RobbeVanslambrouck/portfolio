@@ -1,8 +1,9 @@
 <script>
-  import { inview, addInview, removeInview } from "../stores";
-  import viewport from "../useViewportAction";
-  import skillsJson from "../skills.json";
-  import Skill from "./Skill.svelte";
+  import { addInview, removeInview } from '../stores';
+  import viewport from '../useViewportAction';
+  import skillsJson from '../skills.json';
+  import SkillCategorie from './skillCategorie.svelte';
+
   let categories = {};
   skillsJson.skills.forEach((skill) => {
     if (categories[skill.category]) {
@@ -13,10 +14,10 @@
   });
 
   const handleEnterViewport = () => {
-    addInview("skills");
+    addInview('skills');
   };
   const handleExitViewport = () => {
-    removeInview("skills");
+    removeInview('skills');
   };
 </script>
 
@@ -27,17 +28,10 @@
   on:enterViewport={handleEnterViewport}
   on:exitViewport={handleExitViewport}
 >
-  <h2>skills</h2>
+  <h2>{'<skills />'}</h2>
   <div class="categories">
     {#each Object.entries(categories) as [category, skills]}
-      <div class="category">
-        <p class="title">{category}</p>
-        <div class="skills">
-          {#each skills as skill}
-            <Skill {skill} />
-          {/each}
-        </div>
-      </div>
+      <SkillCategorie {skills}>{category}</SkillCategorie>
     {/each}
   </div>
 </section>

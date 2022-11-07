@@ -1,33 +1,39 @@
 <script>
-  import viewport from "../useViewportAction";
-  import { inview, addInview, removeInview } from "../stores";
-  import projectsJson from "../projects.json";
+  import Project from './Project.svelte';
 
-  let showLivePages = false;
+  import viewport from '../useViewportAction';
+  import { addInview, removeInview } from '../stores';
+  import projectsJson from '../projects.json';
+
+  let live = false;
   let innerWidth;
-  let iframes = "false";
+  let iframes = 'false';
+  let oddProject = true;
+  const toggle = () => {
+    oddProject = !oddProject;
+  };
   $: inputSize = iframes.length === 0 ? 1 : iframes.length;
 
   $: {
     if (innerWidth < 800) {
-      showLivePages = false;
-      iframes = "false";
+      live = false;
+      iframes = 'false';
     }
   }
 
   $: {
-    showLivePages = iframes === "true";
+    live = iframes === 'true';
   }
 
   const handleFocusout = () => {
-    if (iframes !== "true") iframes = "false";
+    if (iframes !== 'true') iframes = 'false';
   };
 
   const handleEnterViewport = () => {
-    addInview("projects");
+    addInview('projects');
   };
   const handleExitViewport = () => {
-    removeInview("projects");
+    removeInview('projects');
   };
 </script>
 
@@ -40,9 +46,9 @@
   on:exitViewport={handleExitViewport}
 >
   <h2>
-    {"<Projects"}
+    {'<Projects'}
     {#if innerWidth >= 800}
-      &nbsp &nbsp {"iframes ="}
+      &nbsp &nbsp {'iframes ='}
       <input
         name="iframes"
         type="text"
@@ -51,36 +57,11 @@
         on:focusout={handleFocusout}
       />
     {/if}
-    {" />"}
+    {' />'}
   </h2>
   <div class="projects">
-    {#each projectsJson.projects as project}
-      <section class="project">
-        <h3 class="title">{project.name}</h3>
-        <p class="desc">{project.description}</p>
-        <div class="links">
-          <div class="link">
-            <a href={project.liveLink} target="_blank">{"<Demo />"}</a>
-          </div>
-          <div class="link">
-            <a href={project.codeLink} target="_blank">{"<Code />"}</a>
-          </div>
-        </div>
-        {#if showLivePages}
-          <iframe
-            class="preview"
-            src={project.liveLink}
-            title={project.name}
-            frameborder="0"
-          />
-        {:else}
-          <img
-            class="preview"
-            src={project.image}
-            alt="project {project.name} preview"
-          />
-        {/if}
-      </section>
+    {#each projectsJson.projects as project, index}
+      <Project {project} {live} mirrorContent={index % 2 === 1} />
     {/each}
   </div>
 </section>
@@ -109,106 +90,5 @@
     flex-direction: column;
     align-items: center;
     gap: 4rem;
-  }
-
-  .project {
-    display: grid;
-    justify-content: center;
-    border-radius: 0.5rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr auto 1fr;
-    gap: 2rem;
-    grid-template-areas:
-      "img title"
-      "img desc"
-      "img links";
-    padding: 1rem;
-    color: #f1f1f1;
-    background-color: #21209c;
-    box-shadow: 0.1rem 0.4rem 0.4rem #aeaeae;
-    max-width: 80rem;
-  }
-
-  .project:nth-child(odd) {
-    grid-template-areas:
-      "title img"
-      "desc img"
-      "links img";
-  }
-
-  .title {
-    font-size: 3.5rem;
-    font-weight: 600;
-    grid-area: title;
-    align-self: end;
-  }
-
-  .desc {
-    font-size: 1.8rem;
-    grid-area: desc;
-  }
-
-  .links {
-    grid-area: links;
-    align-self: start;
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 2rem;
-    row-gap: 1rem;
-  }
-
-  .link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fdb927;
-    box-shadow: 0rem 0.4rem #7d5b13;
-    border-radius: 0.5rem;
-    font-size: 1.8rem;
-    width: 10rem;
-    font-weight: 600;
-  }
-
-  .link:hover {
-    background-color: #f2ff40;
-
-    box-shadow: 0 0.2rem 4rem #f2ff40, 0rem 0.4rem #7d5b13;
-  }
-
-  .link a {
-    color: #21209c;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-  }
-
-  .link:active {
-    box-shadow: 0 0.2rem #7d5b13;
-    transform: translate(0.2rem);
-  }
-
-  .preview {
-    grid-area: img;
-    max-width: 100%;
-    border-radius: 0.5rem;
-  }
-
-  iframe {
-    height: 100vh;
-    width: 100%;
-    background-color: #f1f1f1;
-  }
-
-  @media only screen and (max-width: 550px) {
-    .project,
-    .project:nth-child(odd) {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-      grid-template-areas:
-        "title"
-        "img"
-        "desc"
-        "links";
-      justify-items: center;
-    }
   }
 </style>
