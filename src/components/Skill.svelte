@@ -1,5 +1,5 @@
 <script>
-  import { fade } from "svelte/transition";
+  import { fade } from 'svelte/transition';
 
   export let skill;
   let isHovered = false;
@@ -14,8 +14,9 @@
   };
 
   let handleMouseMove = (e) => {
-    x = e.clientX + 8;
-    y = e.clientY + 8;
+    let rect = e.target.getBoundingClientRect();
+    x = e.clientX - rect.left + 8;
+    y = e.clientY - rect.top - rect.height + 8;
   };
 </script>
 
@@ -27,7 +28,7 @@
   on:mouseleave={handleMouseLeave}
   on:mousemove={handleMouseMove}
 >
-  {#if skill.link === ""}
+  {#if skill.link === ''}
     <div>
       <img src={skill.icon} alt={skill.name} />
     </div>
@@ -37,18 +38,20 @@
     </a>
   {/if}
   {#if isHovered}
-    <p
-      class="tooltip"
-      style="top: {y}px; left: {x}px"
-      in:fade={{ delay: 500, duration: 500 }}
-      out:fade={{ duration: 500 }}
-    >
-      {#if skill.tooltip !== ""}
-        {skill.tooltip}
-      {:else}
-        {skill.name}
-      {/if}
-    </p>
+    <div class="tooltip-container">
+      <p
+        class="tooltip"
+        style="top: {y}px; left: {x}px"
+        in:fade={{ delay: 500, duration: 500 }}
+        out:fade={{ duration: 500 }}
+      >
+        {#if skill.tooltip !== ''}
+          {skill.tooltip}
+        {:else}
+          {skill.name}
+        {/if}
+      </p>
+    </div>
   {/if}
 </div>
 
@@ -65,6 +68,7 @@
     width: 5rem;
     height: 5rem;
     transition: all 1s;
+    border-radius: 0.5rem;
   }
 
   .skill p {
@@ -76,8 +80,14 @@
     box-shadow: 0.4rem 0.4rem 0.5rem #a1a1a1;
   }
 
+  .tooltip-container {
+    position: relative;
+    width: 0;
+    height: 0;
+  }
+
   .tooltip {
-    position: fixed;
+    position: absolute;
     background-color: #21209c;
     color: #f1f1f1;
     border-radius: 0.2rem;
