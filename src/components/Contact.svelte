@@ -1,12 +1,12 @@
 <script>
-  import { inview, addInview, removeInview } from "../stores";
-  import viewport from "../useViewportAction";
+  import { inview, addInview, removeInview } from '../stores';
+  import viewport from '../useViewportAction';
 
   const handleEnterViewport = () => {
-    addInview("contact");
+    addInview('contact');
   };
   const handleExitViewport = () => {
-    removeInview("contact");
+    removeInview('contact');
   };
 </script>
 
@@ -89,7 +89,7 @@
   }
 
   .icon {
-    content: "";
+    content: '';
     display: block;
     width: var(--icon-size);
     height: var(--icon-size);
@@ -100,12 +100,12 @@
   }
 
   .linkedin {
-    background: url("/assets/linkedin-icon.svg");
+    background: url('/assets/linkedin-icon.svg');
     background-size: var(--icon-size) var(--icon-size);
   }
 
   .github {
-    background: url("/assets/github-icon.svg");
+    background: url('/assets/github-icon.svg');
     background-size: var(--icon-size) var(--icon-size);
   }
 

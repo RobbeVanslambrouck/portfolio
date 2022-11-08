@@ -1,19 +1,19 @@
 <script>
-  import Header from "./components/Header.svelte";
-  import Footer from "./components/Footer.svelte";
-  import Hero from "./components/Hero.svelte";
-  import About from "./components/About.svelte";
-  import Skills from "./components/Skills.svelte";
-  import Projects from "./components/Projects.svelte";
-  import Contact from "./components/Contact.svelte";
+  import Header from './components/Header.svelte';
+  import Footer from './components/Footer.svelte';
+  import Hero from './components/Hero.svelte';
+  import About from './components/About.svelte';
+  import Skills from './components/Skills.svelte';
+  import Projects from './components/Projects.svelte';
+  import Contact from './components/Contact.svelte';
 
-  import { fade } from "svelte/transition";
+  import { fade } from 'svelte/transition';
 
   let scrollY;
   let innerHeight;
 
   const scrollToTop = () => {
-    scrollTo({ top: 0, behavior: "smooth" });
+    scrollTo({ top: 0, behavior: 'smooth' });
   };
 </script>
 

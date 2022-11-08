@@ -1,12 +1,12 @@
 <script>
-  import { inview, addInview, removeInview } from "../stores";
-  import viewport from "../useViewportAction";
+  import { inview, addInview, removeInview } from '../stores';
+  import viewport from '../useViewportAction';
 
   const handleEnterViewport = () => {
-    addInview("hero");
+    addInview('hero');
   };
   const handleExitViewport = () => {
-    removeInview("hero");
+    removeInview('hero');
   };
 </script>
 
@@ -46,7 +46,7 @@
     padding-top: 5rem;
     display: grid;
     grid-template-rows: repeat(5, 1fr);
-    grid-template-areas: "name" "title" "." "icons" ".";
+    grid-template-areas: 'name' 'title' '.' 'icons' '.';
     gap: 1rem;
   }
 

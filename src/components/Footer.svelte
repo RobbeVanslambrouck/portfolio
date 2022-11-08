@@ -1,5 +1,5 @@
 <script>
-  import githubLogo from "../assets/github-icon.svg";
+  import githubLogo from '../assets/github-icon.svg';
 </script>
 
 <footer>

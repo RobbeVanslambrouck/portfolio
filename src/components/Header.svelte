@@ -1,5 +1,5 @@
 <script>
-  import { inview } from "../stores";
+  import { inview } from '../stores';
 
   let width = 0;
 
@@ -26,7 +26,7 @@
       </div>
     {/if}
     <ul
-      class={isMenuVisible ? "" : "hide-menu"}
+      class={isMenuVisible ? '' : 'hide-menu'}
       on:click={() => {
         if (width <= 500) {
           isMenuVisible = false;
@@ -36,32 +36,32 @@
       <li>
         <a
           href="#home"
-          class={$inview.find((e) => e === "hero") ? "active" : ""}>home</a
+          class={$inview.find((e) => e === 'hero') ? 'active' : ''}>home</a
         >
       </li>
       <li>
         <a
           href="#about"
-          class={$inview.find((e) => e === "about") ? "active" : ""}>about</a
+          class={$inview.find((e) => e === 'about') ? 'active' : ''}>about</a
         >
       </li>
       <li>
         <a
           href="#skills"
-          class={$inview.find((e) => e === "skills") ? "active" : ""}>skills</a
+          class={$inview.find((e) => e === 'skills') ? 'active' : ''}>skills</a
         >
       </li>
       <li>
         <a
           href="#projects"
-          class={$inview.find((e) => e === "projects") ? "active" : ""}
+          class={$inview.find((e) => e === 'projects') ? 'active' : ''}
           >projects</a
         >
       </li>
       <li>
         <a
           href="#contact"
-          class={$inview.find((e) => e === "contact") ? "active" : ""}
+          class={$inview.find((e) => e === 'contact') ? 'active' : ''}
           >contact</a
         >
       </li>
