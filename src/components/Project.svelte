@@ -1,16 +1,28 @@
 <script>
   import { inview } from 'svelte-inview';
   import { fade } from 'svelte/transition';
+  import ImageOverlay from './ImageOverlay.svelte';
+  import skillsJson from '../skills.json';
+  import Skill from './Skill.svelte';
   export let live;
   export let project;
   export let mirrorContent = false;
+
+  let projectClasses = mirrorContent ? 'project mirror' : 'project';
+
+  let skills = skillsJson.skills.filter((skill) => {
+    if (project.skills) {
+      return project.skills.includes(skill.name);
+    }
+    return false;
+  });
+
+  // fade in effect
   let isInView;
   const inviewOptions = {
     unobserveOnEnter: true,
     rootMargin: '-20%',
   };
-  let projectClasses = mirrorContent ? 'project mirror' : 'project';
-
   const handleInviewChange = (e) => {
     const { inView } = e.detail;
     isInView = inView;
@@ -38,17 +50,35 @@
           frameborder="0"
         />
       {:else}
-        <img
-          class="preview"
-          src={project.image}
-          alt="project {project.name} preview"
-        />
+        <div class="preview">
+          <ImageOverlay
+            src={project.image}
+            alt="project {project.name} preview"
+          >
+            <div class="overlay">
+              {#each skills as skill}
+                <Skill {skill} />
+              {/each}
+            </div>
+          </ImageOverlay>
+        </div>
       {/if}
     </section>
   {/if}
 </div>
 
 <style>
+  .overlay {
+    position: absolute;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+  }
   .project {
     display: grid;
     justify-content: center;
