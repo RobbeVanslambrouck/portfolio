@@ -9,7 +9,6 @@
   const inviewOptions = {
     unobserveOnEnter: true,
     rootMargin: '-20%',
-    threshold: 1,
   };
 
   const handleInviewChange = (e) => {
@@ -18,7 +17,7 @@
   };
 </script>
 
-<div use:inview={inviewOptions} on:change={handleInviewChange}>
+<div class="view" use:inview={inviewOptions} on:change={handleInviewChange}>
   {#if isInView}
     <div class="category" in:fade>
       <p class="title"><slot /></p>
@@ -32,10 +31,13 @@
 </div>
 
 <style>
+  .view {
+    display: flex;
+  }
+
   .category {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     gap: 1rem;
   }
