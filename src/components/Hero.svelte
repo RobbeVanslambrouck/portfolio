@@ -1,6 +1,7 @@
 <script>
   import { inview, addInview, removeInview } from '../stores';
   import viewport from '../useViewportAction';
+  import { theme } from '../stores';
 
   const handleEnterViewport = () => {
     addInview('hero');
@@ -8,6 +9,8 @@
   const handleExitViewport = () => {
     removeInview('hero');
   };
+
+  $: invert = $theme === 'dark' ? ' invert' : '';
 </script>
 
 <section
@@ -32,7 +35,7 @@
       href="https://github.com/RobbeVanslambrouck"
       target="_blank"
       class="github icon"
-      ><img src="assets/github-icon.svg" alt="github icon" /></a
+      ><img class={invert} src="assets/github-icon.svg" alt="github icon" /></a
     >
     <a href="mailto:robbevsb.dev@gmail.com" class="gmail icon"
       ><img src="assets/google-gmail.svg" alt="gmail icon" /></a
@@ -84,7 +87,7 @@
     width: 6rem;
     height: 6rem;
     border-radius: var(--border-radius);
-    background-color: var(--surface-variant);
+    background: var(--surface-2);
     box-shadow: var(--box-shadow);
   }
 
@@ -97,7 +100,7 @@
   }
 
   .icon:hover {
-    background-color: var(--primary-container);
+    background: var(--custom-color-1-container-glaze);
     transform: scale(1.05);
   }
 

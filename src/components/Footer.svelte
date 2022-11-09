@@ -12,9 +12,11 @@
 
 <style>
   footer {
-    box-shadow: 3px -3px 10px 3px #ddd;
+    background-color: var(--primary-glaze);
+    box-shadow: 0.1rem -0.2rem 0.2rem var(--outline);
     font-size: 1.6rem;
     height: 5rem;
+    color: var(--on-primary);
   }
   p {
     display: flex;
@@ -25,12 +27,14 @@
     align-items: center;
   }
   a {
+    color: var(--on-primary);
     text-decoration: none;
     display: flex;
     gap: 0.3rem;
   }
 
   a:hover {
+    color: var(--custom-color-1);
     text-decoration: underline;
   }
 

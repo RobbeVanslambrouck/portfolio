@@ -54,7 +54,7 @@
     border-radius: var(--border-radius);
     padding: 1rem;
     padding-bottom: auto;
-    background-color: var(--surface-variant);
+    background: var(--surface-1);
     box-shadow: var(--box-shadow);
 
     display: grid;
@@ -65,7 +65,7 @@
   }
 
   .skills:hover {
-    background-color: var(--primary-container);
+    background: var(--surface-2);
   }
 
   @media only screen and (min-width: 350px) {

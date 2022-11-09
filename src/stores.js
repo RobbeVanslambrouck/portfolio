@@ -1,4 +1,4 @@
-import { writable } from "svelte/store";
+import { writable } from 'svelte/store';
 
 export const inview = writable([]);
 
@@ -15,3 +15,5 @@ export const removeInview = (element) => {
     return $inview;
   });
 };
+
+export let theme = writable('light');

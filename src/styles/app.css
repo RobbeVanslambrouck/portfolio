@@ -19,6 +19,39 @@ body.dark {
   --surface: #1b1b1f;
   --on-surface: #e3e2e6;
 
+  --surface-glaze: #1b1b1fcc;
+
+  --surface-1: linear-gradient(
+      0deg,
+      rgba(173, 198, 255, 0.05),
+      rgba(173, 198, 255, 0.05)
+    ),
+    #1b1b1f;
+  --surface-2: linear-gradient(
+      0deg,
+      rgba(173, 198, 255, 0.08),
+      rgba(173, 198, 255, 0.08)
+    ),
+    #1b1b1f;
+  --surface-3: linear-gradient(
+      0deg,
+      rgba(173, 198, 255, 0.11),
+      rgba(173, 198, 255, 0.11)
+    ),
+    #1b1b1f;
+  --surface-4: linear-gradient(
+      0deg,
+      rgba(173, 198, 255, 0.12),
+      rgba(173, 198, 255, 0.12)
+    ),
+    #1b1b1f;
+  --surface-5: linear-gradient(
+      0deg,
+      rgba(173, 198, 255, 0.14),
+      rgba(173, 198, 255, 0.14)
+    ),
+    #1b1b1f;
+
   --surface-variant: #44474f;
   --on-surface-variant: #c4c6d0;
   --outline: #8e9099;
@@ -51,6 +84,39 @@ body.dark {
   --surface: #fefbff;
   --on-surface: #1b1b1f;
 
+  --surface-glaze: #fefbffcc;
+
+  --surface-1: linear-gradient(
+      0deg,
+      rgba(0, 90, 193, 0.05),
+      rgba(0, 90, 193, 0.05)
+    ),
+    #fefbff;
+  --surface-2: linear-gradient(
+      0deg,
+      rgba(0, 90, 193, 0.08),
+      rgba(0, 90, 193, 0.08)
+    ),
+    #fefbff;
+  --surface-3: linear-gradient(
+      0deg,
+      rgba(0, 90, 193, 0.11),
+      rgba(0, 90, 193, 0.11)
+    ),
+    #fefbff;
+  --surface-4: linear-gradient(
+      0deg,
+      rgba(0, 90, 193, 0.12),
+      rgba(0, 90, 193, 0.12)
+    ),
+    #fefbff;
+  --surface-5: linear-gradient(
+      0deg,
+      rgba(0, 90, 193, 0.14),
+      rgba(0, 90, 193, 0.14)
+    ),
+    #fefbff;
+
   --surface-variant: #e1e2ec;
   --on-surface-variant: #44474f;
   --outline: #74777f;
@@ -73,7 +139,7 @@ body.dark {
 
   --border-radius: 1rem;
 
-  --box-shadow: 0.1rem 0.2rem 0.2rem var(--outline);
+  --box-shadow: 0 0 0.3rem 0.1rem var(--outline);
 }
 
 .sr-only:not(:focus):not(:active) {
@@ -104,4 +170,8 @@ a:hover {
 
 .page {
   min-height: 90vh;
+}
+
+.invert {
+  filter: invert();
 }

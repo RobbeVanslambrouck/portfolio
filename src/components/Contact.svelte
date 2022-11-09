@@ -1,6 +1,7 @@
 <script>
   import { inview, addInview, removeInview } from '../stores';
   import viewport from '../useViewportAction';
+  import { theme } from '../stores';
 
   const handleEnterViewport = () => {
     addInview('contact');
@@ -8,6 +9,8 @@
   const handleExitViewport = () => {
     removeInview('contact');
   };
+
+  $: invert = $theme === 'dark' ? ' invert' : '';
 </script>
 
 <section
@@ -38,7 +41,7 @@
         <a
           href="https://github.com/RobbeVanslambrouck"
           target="_blank"
-          class="github icon"><p class="sr-only">github</p></a
+          class={'github icon' + invert}><p class="sr-only">github</p></a
         >
       </div>
     </div>

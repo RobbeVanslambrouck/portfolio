@@ -57,7 +57,7 @@
 
 <style>
   .skill {
-    background-color: var(--surface);
+    background: var(--surface-3);
     box-shadow: var(--box-shadow);
     padding: 0.5rem;
     border-radius: var(--border-radius);
@@ -77,7 +77,7 @@
   }
 
   .skill:hover {
-    background-color: var(--surface-variant);
+    background-color: var(--custom-color-1-container-glaze);
     transform: scale(1.05);
   }
 

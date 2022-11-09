@@ -1,8 +1,12 @@
 <script>
+  import { query_selector_all } from 'svelte/internal';
   import { inview } from '../stores';
+  import { theme } from '../stores';
 
   let width = 0;
+  let darkTheme;
 
+  $: $theme = darkTheme ? 'dark' : 'light';
   $: isMenuVisible = width >= 500;
 </script>
 
@@ -27,9 +31,9 @@
     {/if}
     <ul
       class={isMenuVisible ? '' : 'hide-menu'}
-      on:click={() => {
+      on:click={(e) => {
         if (width <= 500) {
-          isMenuVisible = false;
+          isMenuVisible = e.target.id === 'darkmode-toggle';
         }
       }}
     >
@@ -65,6 +69,15 @@
           >contact</a
         >
       </li>
+      <li class="theme-menu-item">
+        <input
+          type="checkbox"
+          name="theme"
+          id="darkmode-toggle"
+          bind:checked={darkTheme}
+        />
+        <label for="darkmode-toggle" />
+      </li>
     </ul>
   </nav>
 </header>
@@ -78,8 +91,54 @@
     z-index: 1;
   }
 
-  nav {
-    height: 0px;
+  .theme-menu-item {
+    margin: 0 1rem;
+    align-self: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .theme-menu-item label {
+    width: 4.4rem;
+    height: 2.2rem;
+    position: relative;
+    display: block;
+    border-radius: var(--border-radius);
+    box-shadow: inset 0 0.2rem 0.6rem rgba(0, 0, 0, 0.4),
+      inset 0 -0.2rem 0.6rem rgba(255, 255, 255, 0.4);
+    background-color: var(--surface-glaze);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .theme-menu-item label:after {
+    content: '';
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 0.1rem;
+    left: 0.1rem;
+    background: linear-gradient(180deg, #ffcc88, #d8860b);
+    border-radius: 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+  }
+
+  .theme-menu-item input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  .theme-menu-item input:checked + label:after {
+    left: 4.3rem;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #aaa, #6a6a6a);
+  }
+
+  .theme-menu-item label:active::after {
+    width: 2rem;
   }
 
   #nav-toggle {
@@ -178,6 +237,7 @@
   .hide-menu:not(:focus):not(:active) {
     transform: translate(-100%, 0%);
     opacity: 0;
+    height: 0;
   }
 
   a {
@@ -202,6 +262,12 @@
   @media only screen and (min-width: 500px) {
     header {
       box-shadow: var(--box-shadow);
+    }
+
+    .theme-menu-item {
+      margin: 0 1rem 0 auto;
+      align-self: flex-start;
+      position: relative;
     }
 
     nav ul {

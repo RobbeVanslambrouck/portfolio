@@ -8,9 +8,25 @@
   import Contact from './components/Contact.svelte';
 
   import { fade } from 'svelte/transition';
+  import { get } from 'svelte/store';
+  import { theme } from './stores';
+  import { onDestroy, onMount } from 'svelte';
 
   let scrollY;
   let innerHeight;
+
+  let activeTheme = get(theme);
+  let unsubscribe = theme.subscribe((value) => {
+    window.document.body.classList.toggle(activeTheme);
+    activeTheme = value;
+    window.document.body.classList.toggle(activeTheme);
+  });
+
+  onMount(() => {
+    $theme = 'light';
+  });
+
+  onDestroy(unsubscribe);
 
   const scrollToTop = () => {
     scrollTo({ top: 0, behavior: 'smooth' });
@@ -53,6 +69,7 @@
     line-height: 4rem;
     background-color: var(--custom-color-1-container-glaze);
     box-shadow: var(--box-shadow);
+    backdrop-filter: blur(0.5rem);
 
     border: none;
     border-radius: 50%;

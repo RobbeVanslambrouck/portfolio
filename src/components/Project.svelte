@@ -94,13 +94,21 @@
     padding: 1rem;
     color: var(--on-surface-variant);
     background-color: var(--surface-variant);
-    box-shadow: 0.1rem 0.2rem 0.2rem var(--outline);
+    box-shadow: var(--box-shadow);
     max-width: 80rem;
   }
 
   .project:hover {
     background-color: var(--primary-container);
     color: var(--on-primary-container);
+  }
+
+  .project:hover .link {
+    background-color: var(--primary);
+  }
+
+  .project:hover .link:hover {
+    background-color: var(--on-primary-container);
   }
 
   .mirror {
@@ -135,16 +143,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--primary);
+    background-color: var(--primary-glaze);
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     font-size: 1.8rem;
     width: 10rem;
     font-weight: 600;
-  }
-
-  .link:hover {
-    background-color: var(--on-primary-container);
   }
 
   .link a {
@@ -154,8 +158,6 @@
   }
 
   .link:active {
-    box-shadow: 0 0.2rem #7d5b13;
-    transform: translate(0.2rem);
   }
 
   .preview {
