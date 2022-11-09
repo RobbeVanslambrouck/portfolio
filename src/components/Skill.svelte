@@ -57,10 +57,10 @@
 
 <style>
   .skill {
-    background-color: #f1f1f1;
-    box-shadow: 0.2rem 0.2rem 0.5rem #a1a1a1;
+    background-color: var(--surface);
+    box-shadow: var(--box-shadow);
     padding: 0.5rem;
-    border-radius: 0.5rem;
+    border-radius: var(--border-radius);
     height: auto;
   }
 
@@ -68,7 +68,7 @@
     width: 5rem;
     height: 5rem;
     transition: all 1s;
-    border-radius: 0.5rem;
+    border-radius: var(--border-radius);
   }
 
   .skill p {
@@ -77,7 +77,8 @@
   }
 
   .skill:hover {
-    box-shadow: 0.4rem 0.4rem 0.5rem #a1a1a1;
+    background-color: var(--surface-variant);
+    transform: scale(1.05);
   }
 
   .tooltip-container {
@@ -88,12 +89,14 @@
 
   .tooltip {
     position: absolute;
-    background-color: #21209c;
-    color: #f1f1f1;
-    border-radius: 0.2rem;
-    padding: 0.5rem;
+    background-color: var(--custom-color-1-container-glaze);
+    backdrop-filter: blur(0.2rem);
+    color: var(--on-custom-color-1-container);
+    border-radius: var(--border-radius);
+    padding: 1rem;
     z-index: 1;
-    text-transform: none !important;
+    font-size: 1.2rem;
+    font-weight: 600;
   }
 
   @media only screen and (min-width: 800px) {

@@ -71,7 +71,6 @@
 
 <style>
   header {
-    background-color: none;
     position: fixed;
     left: 0;
     top: 0;
@@ -91,8 +90,6 @@
     height: 0;
     width: 0;
     z-index: 1;
-
-    -webkit-user-select: none;
     user-select: none;
   }
 
@@ -117,7 +114,7 @@
     margin-bottom: 0.5rem;
     position: relative;
 
-    background: #fdb827;
+    background: var(--primary);
     border-radius: 0.3rem;
 
     z-index: 1;
@@ -137,7 +134,7 @@
   }
 
   #nav-toggle input:checked ~ span {
-    background: #21209c;
+    background: var(--on-primary-container);
   }
 
   #nav-toggle input:checked ~ span:nth-last-child(3) {
@@ -155,6 +152,7 @@
   }
 
   nav ul {
+    backdrop-filter: blur(1rem);
     position: relative;
     top: 0;
     left: 0;
@@ -163,18 +161,18 @@
     justify-content: center;
     align-items: stretch;
     text-align: center;
-    box-shadow: 4px 4px 10px 10px #e1e1e1;
+    box-shadow: var(--box-shadow);
     transition: all 0.55s ease;
-    background-color: #f1f1f1;
+    background-color: var(--primary-container-glaze);
   }
 
   nav li {
     height: 4rem;
-    border-bottom: 1px solid #fdb827;
+    border-bottom: 1px solid var(--on-primary-container);
   }
 
-  nav li:nth-child(1) {
-    margin-top: 4rem;
+  nav li:last-child {
+    border-bottom: none;
   }
 
   .hide-menu:not(:focus):not(:active) {
@@ -187,24 +185,23 @@
     text-decoration: none;
     text-transform: capitalize;
     font-size: 1.8rem;
-    color: black;
+    font-weight: 500;
+    color: var(--on-primary-container);
     line-height: 4rem;
   }
 
   a:hover {
-    color: #4d4dff;
-    text-shadow: 0rem 0rem 1.5rem #4d4dff;
+    color: var(--primary);
     text-decoration: underline;
   }
 
   .active {
-    color: #21209c;
-    /* text-shadow: 0rem 0rem 1.5rem #21209c; */
+    color: var(--primary);
   }
 
   @media only screen and (min-width: 500px) {
     header {
-      box-shadow: 4px 4px 10px 10px #e1e1e1;
+      box-shadow: var(--box-shadow);
     }
 
     nav ul {
@@ -212,6 +209,7 @@
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
+      background-color: var(--primary-glaze);
     }
 
     nav li {
@@ -228,10 +226,18 @@
       text-decoration: none;
       text-transform: capitalize;
       font-size: 1.8rem;
-      color: black;
       border-bottom: none;
       padding: 1rem;
       line-height: normal;
+      color: var(--on-primary);
+    }
+
+    a:hover {
+      color: var(--on-background);
+    }
+
+    .active {
+      color: var(--on-background);
     }
   }
 </style>

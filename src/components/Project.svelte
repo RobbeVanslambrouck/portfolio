@@ -82,7 +82,8 @@
   .project {
     display: grid;
     justify-content: center;
-    border-radius: 0.5rem;
+    justify-items: center;
+    border-radius: var(--border-radius);
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr auto 1fr;
     gap: 2rem;
@@ -91,10 +92,15 @@
       'img desc'
       'img links';
     padding: 1rem;
-    color: #f1f1f1;
-    background-color: #21209c;
-    box-shadow: 0.1rem 0.4rem 0.4rem #aeaeae;
+    color: var(--on-surface-variant);
+    background-color: var(--surface-variant);
+    box-shadow: 0.1rem 0.2rem 0.2rem var(--outline);
     max-width: 80rem;
+  }
+
+  .project:hover {
+    background-color: var(--primary-container);
+    color: var(--on-primary-container);
   }
 
   .mirror {
@@ -129,24 +135,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fdb927;
-    box-shadow: 0rem 0.4rem #7d5b13;
-    border-radius: 0.5rem;
+    background-color: var(--primary);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
     font-size: 1.8rem;
     width: 10rem;
     font-weight: 600;
   }
 
   .link:hover {
-    background-color: #f2ff40;
-
-    box-shadow: 0 0.2rem 4rem #f2ff40, 0rem 0.4rem #7d5b13;
+    background-color: var(--on-primary-container);
   }
 
   .link a {
-    color: #21209c;
+    color: var(--on-primary);
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
   }
 
   .link:active {
@@ -157,7 +161,7 @@
   .preview {
     grid-area: img;
     max-width: 100%;
-    border-radius: 0.5rem;
+    border-radius: var(--border-radius);
   }
 
   iframe {

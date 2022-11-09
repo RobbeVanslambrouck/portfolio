@@ -40,7 +40,7 @@
   }
 
   img {
-    border-radius: 0.5rem;
+    border-radius: var(--border-radius);
   }
 
   #content {

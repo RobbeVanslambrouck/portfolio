@@ -78,11 +78,13 @@
 
   input {
     border: none;
+    border-radius: var(--border-radius);
     font-size: inherit;
     font-weight: inherit;
     margin-right: -3.5rem;
     cursor: pointer;
-    background-color: #f1f1f1;
+    background-color: var(--custom-color-1-container-glaze);
+    color: var(--on-custom-color-1-container);
   }
 
   .projects {

@@ -21,7 +21,7 @@
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 0.5rem;
+    border-radius: var(--border-radius);
   }
   .overlay {
     transition: 0.5s ease;
@@ -33,7 +33,7 @@
   }
 
   .container:hover img {
-    opacity: 0.3;
+    filter: blur(1rem);
   }
 
   .container:hover .overlay {

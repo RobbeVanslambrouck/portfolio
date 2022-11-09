@@ -67,11 +67,8 @@
     margin-bottom: 0.6rem;
   }
 
-  .email-link,
-  .linkedin,
-  .github {
+  .email-link {
     font-size: 5.7vw;
-    color: #21209c;
   }
 
   .email-link {
@@ -93,6 +90,7 @@
     display: block;
     width: var(--icon-size);
     height: var(--icon-size);
+    border-radius: var(--border-radius);
   }
 
   .icon:hover {
@@ -127,9 +125,7 @@
       font-size: 5rem;
     }
 
-    .email-link,
-    .linkedin,
-    .github {
+    .email-link {
       font-size: 3.5rem;
     }
   }

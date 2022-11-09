@@ -38,15 +38,15 @@
 
 <style>
   section {
-    min-height: 80vh;
     max-width: 80rem;
     margin: 0 auto;
+    padding-bottom: 10rem;
   }
 
   .categories {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: stretch;
     gap: 3rem;
   }

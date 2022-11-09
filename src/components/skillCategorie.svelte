@@ -33,6 +33,7 @@
 <style>
   .view {
     display: flex;
+    margin: 0 auto;
   }
 
   .category {
@@ -50,17 +51,21 @@
 
   .skills {
     flex: auto;
-    border-radius: 0.5rem;
+    border-radius: var(--border-radius);
     padding: 1rem;
     padding-bottom: auto;
-    background-color: #fdb927;
-    box-shadow: 0.4rem 0.4rem 0.5rem #a1a1a1;
+    background-color: var(--surface-variant);
+    box-shadow: var(--box-shadow);
 
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: min-content;
     align-items: center;
+  }
+
+  .skills:hover {
+    background-color: var(--primary-container);
   }
 
   @media only screen and (min-width: 350px) {

@@ -25,15 +25,17 @@
     <a
       href="https://www.linkedin.com/in/robbe-vanslambrouck-281734242/"
       class="linkedin icon"
-      target="_blank"><img src="assets/linkedin-icon.svg" alt="" /></a
+      target="_blank"
+      ><img src="assets/linkedin-icon.svg" alt="linkedin icon" /></a
     >
     <a
       href="https://github.com/RobbeVanslambrouck"
       target="_blank"
-      class="github icon"><img src="assets/github-icon.svg" alt="" /></a
+      class="github icon"
+      ><img src="assets/github-icon.svg" alt="github icon" /></a
     >
     <a href="mailto:robbevsb.dev@gmail.com" class="gmail icon"
-      ><img src="assets/google-gmail.svg" alt="" /></a
+      ><img src="assets/google-gmail.svg" alt="gmail icon" /></a
     >
   </div>
 </section>
@@ -81,24 +83,22 @@
     align-items: center;
     width: 6rem;
     height: 6rem;
-    border-radius: 0.5rem;
-    background-color: #d1d1d1;
-    box-shadow: 0.2rem 0.2rem 0.5rem #a1a1a1;
+    border-radius: var(--border-radius);
+    background-color: var(--surface-variant);
+    box-shadow: var(--box-shadow);
   }
 
   .icon img {
     width: 4rem;
+    height: 4rem;
     object-fit: contain;
-    background-color: #d1d1d1;
-  }
-
-  .github img {
-    border-radius: 50%;
+    background-color: transparent;
+    border-radius: var(--border-radius);
   }
 
   .icon:hover {
+    background-color: var(--primary-container);
     transform: scale(1.05);
-    box-shadow: 0.4rem 0.4rem 0.5rem #a1a1a1;
   }
 
   @media screen and (min-width: 450px) {

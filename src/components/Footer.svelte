@@ -26,13 +26,11 @@
   }
   a {
     text-decoration: none;
-    color: black;
     display: flex;
     gap: 0.3rem;
   }
 
   a:hover {
-    color: #ff3e00;
     text-decoration: underline;
   }
 
