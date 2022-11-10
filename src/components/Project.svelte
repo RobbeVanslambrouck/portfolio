@@ -96,19 +96,23 @@
     background-color: var(--surface-variant);
     box-shadow: var(--box-shadow);
     max-width: 80rem;
+    transition: 0.3s;
   }
 
   .project:hover {
     background-color: var(--primary-container);
     color: var(--on-primary-container);
+    transition: 0.3s;
   }
 
   .project:hover .link {
     background-color: var(--primary);
+    transition: 0.3s;
   }
 
   .project:hover .link:hover {
     background-color: var(--on-primary-container);
+    transition: 0.6s;
   }
 
   .mirror {
@@ -149,15 +153,14 @@
     font-size: 1.8rem;
     width: 10rem;
     font-weight: 600;
+    transition: 0.3s;
   }
 
   .link a {
     color: var(--on-primary);
     text-decoration: none;
     padding: 1rem;
-  }
-
-  .link:active {
+    transition: 0.3s;
   }
 
   .preview {

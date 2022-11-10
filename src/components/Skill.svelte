@@ -42,8 +42,8 @@
       <p
         class="tooltip"
         style="top: {y}px; left: {x}px"
-        in:fade={{ delay: 500, duration: 500 }}
-        out:fade={{ duration: 500 }}
+        in:fade={{ delay: 300, duration: 300 }}
+        out:fade={{ duration: 300 }}
       >
         {#if skill.tooltip !== ''}
           {skill.tooltip}
@@ -62,6 +62,7 @@
     padding: 0.5rem;
     border-radius: var(--border-radius);
     height: auto;
+    transition: 0.3s;
   }
 
   .skill img {
@@ -79,6 +80,7 @@
   .skill:hover {
     background-color: var(--custom-color-1-container-glaze);
     transform: scale(1.05);
+    transition: 0.3s;
   }
 
   .tooltip-container {

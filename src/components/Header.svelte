@@ -138,7 +138,7 @@
   }
 
   .theme-menu-item label:active::after {
-    width: 2rem;
+    width: 3.2rem;
   }
 
   #nav-toggle {
@@ -248,20 +248,24 @@
     font-weight: 500;
     color: var(--on-primary-container);
     line-height: 4rem;
+    transition: 0.6s;
   }
 
   a:hover {
     color: var(--primary);
     text-decoration: underline;
+    transition: 0.3s;
   }
 
   .active {
     color: var(--primary);
+    transition: 0.3s;
   }
 
   @media only screen and (min-width: 500px) {
     header {
       box-shadow: var(--box-shadow);
+      background-color: var(--primary-glaze);
     }
 
     .theme-menu-item {
@@ -270,12 +274,19 @@
       position: relative;
     }
 
+    nav {
+      max-width: 110rem;
+      margin: 0 auto;
+    }
+
     nav ul {
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
-      background-color: var(--primary-glaze);
+      background: none;
+      background-color: none;
+      box-shadow: none;
     }
 
     nav li {

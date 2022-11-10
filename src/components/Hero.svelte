@@ -89,6 +89,7 @@
     border-radius: var(--border-radius);
     background: var(--surface-2);
     box-shadow: var(--box-shadow);
+    transition: 0.3s;
   }
 
   .icon img {
@@ -102,6 +103,7 @@
   .icon:hover {
     background: var(--custom-color-1-container-glaze);
     transform: scale(1.05);
+    transition: 0.3s;
   }
 
   @media screen and (min-width: 450px) {
