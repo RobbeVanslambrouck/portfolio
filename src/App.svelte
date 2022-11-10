@@ -79,10 +79,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.3s;
   }
 
   .scroll-to-top:hover {
     background-color: var(--custom-color-1-glaze);
+    transition: 0.3s;
   }
 
   .arrow {
