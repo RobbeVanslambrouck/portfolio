@@ -8,25 +8,16 @@
   import Contact from './components/Contact.svelte';
 
   import { fade } from 'svelte/transition';
-  import { get } from 'svelte/store';
   import { theme } from './stores';
-  import { onDestroy, onMount } from 'svelte';
+  import { onMount } from 'svelte';
 
   let scrollY;
   let innerHeight;
 
-  let activeTheme = get(theme);
-  let unsubscribe = theme.subscribe((value) => {
-    window.document.body.classList.toggle(activeTheme);
-    activeTheme = value;
-    window.document.body.classList.toggle(activeTheme);
-  });
-
   onMount(() => {
-    $theme = 'light';
+    window.document.body.className = $theme;
   });
-
-  onDestroy(unsubscribe);
+  $: window.document.body.className = $theme;
 
   const scrollToTop = () => {
     scrollTo({ top: 0, behavior: 'smooth' });

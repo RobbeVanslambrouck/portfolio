@@ -1,12 +1,12 @@
 <script>
-  import { query_selector_all } from 'svelte/internal';
+  import { onMount } from 'svelte/internal';
   import { inview } from '../stores';
   import { theme } from '../stores';
 
   let width = 0;
-  let darkTheme;
+  let darkThemeToggle = $theme === 'dark';
 
-  $: $theme = darkTheme ? 'dark' : 'light';
+  $: $theme = darkThemeToggle ? 'dark' : 'light';
   $: isMenuVisible = width >= 500;
 </script>
 
@@ -74,7 +74,7 @@
           type="checkbox"
           name="theme"
           id="darkmode-toggle"
-          bind:checked={darkTheme}
+          bind:checked={darkThemeToggle}
         />
         <label for="darkmode-toggle" />
       </li>
