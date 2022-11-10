@@ -90,7 +90,7 @@
   .projects {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     gap: 4rem;
   }
 </style>
