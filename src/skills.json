@@ -2,112 +2,112 @@
   "skills": [
     {
       "name": "HTML5",
-      "icon": "/assets/html-5.svg",
+      "icon": "/portfolio/assets/html-5.svg",
       "category": "front-end",
       "tooltip": "",
       "link": ""
     },
     {
       "name": "CSS3",
-      "icon": "/assets/css-3.svg",
+      "icon": "/portfolio/assets/css-3.svg",
       "category": "front-end",
       "tooltip": "",
       "link": ""
     },
     {
       "name": "sass",
-      "icon": "/assets/sass.svg",
+      "icon": "/portfolio/assets/sass.svg",
       "category": "front-end",
       "tooltip": "",
       "link": "https://sass-lang.com/"
     },
     {
       "name": "JavaScript",
-      "icon": "/assets/javascript.svg",
+      "icon": "/portfolio/assets/javascript.svg",
       "category": "front-end",
       "tooltip": "",
       "link": "https://www.javascript.com/"
     },
     {
       "name": "TypeScript",
-      "icon": "/assets/typescript-icon.svg",
+      "icon": "/portfolio/assets/typescript-icon.svg",
       "category": "front-end",
       "tooltip": "",
       "link": "https://www.typescriptlang.org/"
     },
     {
       "name": "React",
-      "icon": "/assets/react.svg",
+      "icon": "/portfolio/assets/react.svg",
       "category": "front-end",
       "tooltip": "",
       "link": "https://reactjs.org/"
     },
     {
       "name": "svelte",
-      "icon": "/assets/svelte.svg",
+      "icon": "/portfolio/assets/svelte.svg",
       "category": "front-end",
       "tooltip": "because I like it",
       "link": "https://svelte.dev/"
     },
     {
       "name": "npm",
-      "icon": "/assets/npm-icon.svg",
+      "icon": "/portfolio/assets/npm-icon.svg",
       "category": "miscellaneous",
       "tooltip": "",
       "link": "https://www.npmjs.com/"
     },
     {
       "name": "Webpack",
-      "icon": "/assets/webpack.svg",
+      "icon": "/portfolio/assets/webpack.svg",
       "category": "miscellaneous",
       "tooltip": "",
       "link": "https://webpack.js.org/"
     },
     {
       "name": "Vite",
-      "icon": "/assets/vitejs.svg",
+      "icon": "/portfolio/assets/vitejs.svg",
       "category": "miscellaneous",
       "tooltip": "",
       "link": "https://vitejs.dev/"
     },
     {
       "name": "Firebase",
-      "icon": "/assets/firebase.svg",
+      "icon": "/portfolio/assets/firebase.svg",
       "category": "miscellaneous",
       "tooltip": "",
       "link": "https://firebase.google.com/"
     },
     {
       "name": "Git",
-      "icon": "/assets/git-icon.svg",
+      "icon": "/portfolio/assets/git-icon.svg",
       "category": "miscellaneous",
       "tooltip": "",
       "link": "https://git-scm.com/"
     },
     {
       "name": "VS code",
-      "icon": "/assets/visual-studio-code.svg",
+      "icon": "/portfolio/assets/visual-studio-code.svg",
       "category": "miscellaneous",
       "tooltip": "should I try vim?",
       "link": "https://code.visualstudio.com/"
     },
     {
       "name": "Linux",
-      "icon": "/assets/linux-tux.svg",
+      "icon": "/portfolio/assets/linux-tux.svg",
       "category": "miscellaneous",
       "tooltip": "PopOs if u must know",
       "link": "https://pop.system76.com/"
     },
     {
       "name": "Google",
-      "icon": "/assets/google-icon.svg",
+      "icon": "/portfolio/assets/google-icon.svg",
       "category": "miscellaneous",
       "tooltip": "",
       "link": "https://www.google.com/"
     },
     {
       "name": "stackoverflow",
-      "icon": "/assets/stackoverflow-icon.svg",
+      "icon": "/portfolio/assets/stackoverflow-icon.svg",
       "category": "miscellaneous",
       "tooltip": "clrl+c clrl+v",
       "link": "https://stackoverflow.com/"

@@ -5,7 +5,7 @@
       "description": "draw on a canvas. Made with HTML, css and vanilla javascript",
       "liveLink": "https://robbevanslambrouck.github.io/odin-etch_a_sketch/",
       "codeLink": "https://github.com/RobbeVanslambrouck/odin-etch_a_sketch/",
-      "image": "/assets/Etch_a_sketch.png",
+      "image": "/portfolio/assets/Etch_a_sketch.png",
       "skills": ["HTML5", "CSS3", "JavaScript"]
     },
     {
@@ -13,7 +13,7 @@
       "description": "Play battleship against my code. This project was made with HTML, sass and javascript all bundled with webpack.",
       "liveLink": "https://robbevanslambrouck.github.io/battleship/",
       "codeLink": "https://github.com/RobbeVanslambrouck/battleship/",
-      "image": "/assets/battleship.png",
+      "image": "/portfolio/assets/battleship.png",
       "skills": ["HTML5", "CSS3", "JavaScript", "sass"]
     },
     {
@@ -21,15 +21,15 @@
       "description": "How good is your memory? Click the cards that you didn't click yet. This project is made with react.",
       "liveLink": "https://robbevanslambrouck.github.io/react-memory-card/",
       "codeLink": "https://github.com/RobbeVanslambrouck/react-memory-card",
-      "image": "/assets/memory_card.png",
+      "image": "/portfolio/assets/memory_card.png",
       "skills": ["HTML5", "CSS3", "React"]
     },
     {
       "name": "shopping cart",
-      "description": "some fake store made with react.",
+      "description": "this is some fake store made with react.",
       "liveLink": "https://RobbeVanslambrouck.github.io/react-shopping-cart/",
       "codeLink": "https://github.com/RobbeVanslambrouck/react-shopping-cart",
-      "image": "/assets/shopping_cart.png",
+      "image": "/portfolio/assets/shopping_cart.png",
       "skills": ["HTML5", "CSS3", "React"]
     }
   ]
