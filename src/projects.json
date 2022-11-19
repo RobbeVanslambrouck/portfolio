@@ -3,8 +3,8 @@
     {
       "name": "Etch a sketch",
       "description": "draw on a canvas. Made with HTML, css and vanilla javascript",
-      "liveLink": "https://robbevanslambrouck.github.io/odin-etch_a_sketch/",
-      "codeLink": "https://github.com/RobbeVanslambrouck/odin-etch_a_sketch/",
+      "liveLink": "https://robbevanslambrouck.github.io/odin-etch-a-sketch/",
+      "codeLink": "https://github.com/RobbeVanslambrouck/odin-etch-a-sketch/",
       "image": "/portfolio/assets/Etch_a_sketch.png",
       "skills": ["HTML5", "CSS3", "JavaScript"]
     },
