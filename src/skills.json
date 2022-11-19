@@ -15,7 +15,7 @@
       "link": ""
     },
     {
-      "name": "sass",
+      "name": "SASS",
       "icon": "/portfolio/assets/sass.svg",
       "category": "front-end",
       "tooltip": "",
@@ -43,7 +43,7 @@
       "link": "https://reactjs.org/"
     },
     {
-      "name": "svelte",
+      "name": "Svelte",
       "icon": "/portfolio/assets/svelte.svg",
       "category": "front-end",
       "tooltip": "because I like it",
@@ -106,11 +106,25 @@
       "link": "https://www.google.com/"
     },
     {
-      "name": "stackoverflow",
+      "name": "Stackoverflow",
       "icon": "/portfolio/assets/stackoverflow-icon.svg",
       "category": "miscellaneous",
       "tooltip": "clrl+c clrl+v",
       "link": "https://stackoverflow.com/"
+    },
+    {
+      "name": "Sveltekit",
+      "icon": "/portfolio/assets/svelte-kit.svg",
+      "category": "miscellaneous",
+      "tooltip": "",
+      "link": "https://kit.svelte.dev/"
+    },
+    {
+      "name": "Vercel",
+      "icon": "/portfolio/assets/vercel.svg",
+      "category": "none",
+      "tooltip": "",
+      "link": "https://vercel.com/"
     }
   ]
 }

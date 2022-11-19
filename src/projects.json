@@ -1,6 +1,14 @@
 {
   "projects": [
     {
+      "name": "Job Application Manager",
+      "description": "A tool to manage your job applications. This project is currently under construction, its made with sveltekit and firebase and deployed with vercel",
+      "liveLink": "https://job-application-manager.vercel.app/",
+      "codeLink": "https://github.com/RobbeVanslambrouck/Job-Application-Manager/",
+      "image": "/portfolio/assets/site-construction.jpg",
+      "skills": ["Firebase", "Sveltekit", "Vercel"]
+    },
+    {
       "name": "Etch a sketch",
       "description": "draw on a canvas. Made with HTML, css and vanilla javascript",
       "liveLink": "https://robbevanslambrouck.github.io/odin-etch-a-sketch/",
@@ -14,7 +22,7 @@
       "liveLink": "https://robbevanslambrouck.github.io/battleship/",
       "codeLink": "https://github.com/RobbeVanslambrouck/battleship/",
       "image": "/portfolio/assets/battleship.png",
-      "skills": ["HTML5", "CSS3", "JavaScript", "sass"]
+      "skills": ["HTML5", "CSS3", "JavaScript", "SASS"]
     },
     {
       "name": "Memory card",

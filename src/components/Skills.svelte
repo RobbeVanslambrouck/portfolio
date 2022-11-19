@@ -6,6 +6,7 @@
 
   let categories = {};
   skillsJson.skills.forEach((skill) => {
+    if (skill.category === 'none') return;
     if (categories[skill.category]) {
       categories[skill.category].push(skill);
       return;
