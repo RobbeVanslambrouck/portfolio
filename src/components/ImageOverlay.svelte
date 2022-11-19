@@ -14,14 +14,16 @@
   .container {
     position: relative;
     display: inline-block;
+    height: inherit;
   }
   .container img {
     transition: 0.5s ease;
     opacity: 1;
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: var(--border-radius);
+    object-fit: cover;
   }
   .overlay {
     transition: 0.5s ease;

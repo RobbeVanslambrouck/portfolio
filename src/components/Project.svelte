@@ -83,6 +83,7 @@
     display: grid;
     justify-content: center;
     justify-items: center;
+    align-items: center;
     border-radius: var(--border-radius);
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr auto 1fr;
@@ -166,6 +167,7 @@
   .preview {
     grid-area: img;
     max-width: 100%;
+    height: 100%;
     border-radius: var(--border-radius);
   }
 
