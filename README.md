@@ -20,8 +20,20 @@ cd repo
 npm install
 ```
 
-running local dev sever:
+running local dev server:
 
 ```console
 npm run dev
+```
+
+build project:
+
+```console
+npm run build
+```
+
+preview build on local server:
+
+```console
+npm run preview
 ```
