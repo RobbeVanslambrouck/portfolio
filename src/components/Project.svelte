@@ -43,12 +43,7 @@
         </div>
       </div>
       {#if live}
-        <iframe
-          class="preview"
-          src={project.liveLink}
-          title={project.name}
-          frameborder="0"
-        />
+        <iframe src={project.liveLink} title={project.name} frameborder="0" />
       {:else}
         <div class="preview">
           <ImageOverlay
@@ -172,9 +167,11 @@
   }
 
   iframe {
+    grid-area: img;
     height: 100vh;
     width: 100%;
     background-color: #f1f1f1;
+    border-radius: var(--border-radius);
   }
 
   @media only screen and (max-width: 550px) {
