@@ -5,7 +5,7 @@
       "description": "A tool to manage your job applications. This project is made with sveltekit and firebase and deployed with vercel",
       "liveLink": "https://job-application-manager.vercel.app/",
       "codeLink": "https://github.com/RobbeVanslambrouck/Job-Application-Manager/",
-      "image": "/portfolio/assets/site-construction.jpg",
+      "image": "/portfolio/assets/Job-application-manager.png",
       "skills": ["Firebase", "Sveltekit", "Vercel"]
     },
     {
