@@ -125,6 +125,13 @@
       "category": "none",
       "tooltip": "",
       "link": "https://vercel.com/"
+    },
+    {
+      "name": ".net",
+      "icon": "/portfolio/assets/dotnet.svg",
+      "category": "currently learning",
+      "tooltip": "",
+      "link": "https://dotnet.microsoft.com/"
     }
   ]
 }
