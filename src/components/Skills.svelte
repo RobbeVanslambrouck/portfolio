@@ -1,5 +1,5 @@
 <script>
-  import { addInview, removeInview } from '../stores';
+  import { addInView, removeInView } from '../stores';
   import viewport from '../useViewportAction';
   import skillsJson from '../skills.json';
   import SkillCategorie from './skillCategorie.svelte';
@@ -15,10 +15,10 @@
   });
 
   const handleEnterViewport = () => {
-    addInview('skills');
+    addInView('skills');
   };
   const handleExitViewport = () => {
-    removeInview('skills');
+    removeInView('skills');
   };
 </script>
 

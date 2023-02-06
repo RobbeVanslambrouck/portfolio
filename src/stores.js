@@ -1,18 +1,18 @@
 import { writable } from 'svelte/store';
 
-export const inview = writable([]);
+export const inView = writable([]);
 
-export const addInview = (element) => {
-  inview.update(($inview) => {
-    $inview = [...$inview, element];
-    return $inview;
+export const addInView = (element) => {
+  inView.update(($inView) => {
+    $inView = [...$inView, element];
+    return $inView;
   });
 };
 
-export const removeInview = (element) => {
-  inview.update(($inview) => {
-    $inview = $inview.filter((e) => e !== element);
-    return $inview;
+export const removeInView = (element) => {
+  inView.update(($inView) => {
+    $inView = $inView.filter((e) => e !== element);
+    return $inView;
   });
 };
 

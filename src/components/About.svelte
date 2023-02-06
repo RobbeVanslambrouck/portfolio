@@ -1,13 +1,13 @@
 <script>
-  import { inview, addInview, removeInview } from '../stores';
+  import { addInView, removeInView } from '../stores';
   import viewport from '../useViewportAction';
   import mugshot from '../assets/mugshot.jpg';
 
   const handleEnterViewport = () => {
-    addInview('about');
+    addInView('about');
   };
   const handleExitViewport = () => {
-    removeInview('about');
+    removeInView('about');
   };
 </script>
 

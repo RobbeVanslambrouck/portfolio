@@ -1,13 +1,13 @@
 <script>
-  import { inview, addInview, removeInview } from '../stores';
+  import { addInView, removeInView } from '../stores';
   import viewport from '../useViewportAction';
   import { theme } from '../stores';
 
   const handleEnterViewport = () => {
-    addInview('contact');
+    addInView('contact');
   };
   const handleExitViewport = () => {
-    removeInview('contact');
+    removeInView('contact');
   };
 
   $: invert = $theme === 'dark' ? ' invert' : '';

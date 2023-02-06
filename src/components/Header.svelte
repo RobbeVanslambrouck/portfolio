@@ -1,6 +1,5 @@
 <script>
-  import { onMount } from 'svelte/internal';
-  import { inview } from '../stores';
+  import { inView } from '../stores';
   import { theme } from '../stores';
 
   let width = 0;
@@ -40,32 +39,32 @@
       <li>
         <a
           href="#home"
-          class={$inview.find((e) => e === 'hero') ? 'active' : ''}>home</a
+          class={$inView.find((e) => e === 'hero') ? 'active' : ''}>home</a
         >
       </li>
       <li>
         <a
           href="#about"
-          class={$inview.find((e) => e === 'about') ? 'active' : ''}>about</a
+          class={$inView.find((e) => e === 'about') ? 'active' : ''}>about</a
         >
       </li>
       <li>
         <a
           href="#skills"
-          class={$inview.find((e) => e === 'skills') ? 'active' : ''}>skills</a
+          class={$inView.find((e) => e === 'skills') ? 'active' : ''}>skills</a
         >
       </li>
       <li>
         <a
           href="#projects"
-          class={$inview.find((e) => e === 'projects') ? 'active' : ''}
+          class={$inView.find((e) => e === 'projects') ? 'active' : ''}
           >projects</a
         >
       </li>
       <li>
         <a
           href="#contact"
-          class={$inview.find((e) => e === 'contact') ? 'active' : ''}
+          class={$inView.find((e) => e === 'contact') ? 'active' : ''}
           >contact</a
         >
       </li>

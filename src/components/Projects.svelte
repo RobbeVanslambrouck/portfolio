@@ -2,38 +2,38 @@
   import Project from './Project.svelte';
 
   import viewport from '../useViewportAction';
-  import { addInview, removeInview } from '../stores';
+  import { addInView, removeInView } from '../stores';
   import projectsJson from '../projects.json';
 
   let live = false;
   let innerWidth;
-  let iframes = 'false';
+  let iFrames = 'false';
   let oddProject = true;
   const toggle = () => {
     oddProject = !oddProject;
   };
-  $: inputSize = iframes.length === 0 ? 1 : iframes.length;
+  $: inputSize = iFrames.length === 0 ? 1 : iFrames.length;
 
   $: {
     if (innerWidth < 800) {
       live = false;
-      iframes = 'false';
+      iFrames = 'false';
     }
   }
 
   $: {
-    live = iframes === 'true';
+    live = iFrames === 'true';
   }
 
   const handleFocusout = () => {
-    if (iframes !== 'true') iframes = 'false';
+    if (iFrames !== 'true') iFrames = 'false';
   };
 
   const handleEnterViewport = () => {
-    addInview('projects');
+    addInView('projects');
   };
   const handleExitViewport = () => {
-    removeInview('projects');
+    removeInView('projects');
   };
 </script>
 
@@ -52,7 +52,7 @@
       <input
         name="iframes"
         type="text"
-        bind:value={iframes}
+        bind:value={iFrames}
         size={inputSize}
         on:focusout={handleFocusout}
       />
