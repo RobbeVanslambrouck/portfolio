@@ -12,7 +12,7 @@
 <svelte:window bind:innerWidth={width} />
 
 <header>
-  <h1 class="sr-only"><a href="/">robbe vanslambrouck</a></h1>
+  <h1 class="sr-only"><a href="/">Robbe Vanslambrouck</a></h1>
   <nav>
     {#if width < 500}
       <div id="nav-toggle">
@@ -28,14 +28,7 @@
         <span />
       </div>
     {/if}
-    <ul
-      class={isMenuVisible ? '' : 'hide-menu'}
-      on:click={(e) => {
-        if (width <= 500) {
-          isMenuVisible = e.target.id === 'darkmode-toggle';
-        }
-      }}
-    >
+    <ul class={isMenuVisible ? 'show-menu' : 'hide-menu'}>
       <li>
         <a
           href="#home"
