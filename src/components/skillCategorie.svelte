@@ -6,18 +6,18 @@
   export let skills;
 
   let isInView;
-  const inviewOptions = {
+  const inViewOptions = {
     unobserveOnEnter: true,
     rootMargin: '-20%',
   };
 
-  const handleInviewChange = (e) => {
+  const handleInViewChange = (e) => {
     const { inView } = e.detail;
     isInView = inView;
   };
 </script>
 
-<div class="view" use:inview={inviewOptions} on:change={handleInviewChange}>
+<div class="view" use:inview={inViewOptions} on:change={handleInViewChange}>
   {#if isInView}
     <div class="category" in:fade>
       <p class="title"><slot /></p>
