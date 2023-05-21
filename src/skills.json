@@ -50,6 +50,13 @@
       "link": "https://svelte.dev/"
     },
     {
+      "name": "Angular",
+      "icon": "/portfolio/assets/angular-icon.svg",
+      "category": "front-end",
+      "tooltip": "",
+      "link": "https://angular.io/"
+    },
+    {
       "name": "npm",
       "icon": "/portfolio/assets/npm-icon.svg",
       "category": "miscellaneous",
@@ -73,7 +80,7 @@
     {
       "name": "Firebase",
       "icon": "/portfolio/assets/firebase.svg",
-      "category": "miscellaneous",
+      "category": "backend",
       "tooltip": "",
       "link": "https://firebase.google.com/"
     },
@@ -115,7 +122,7 @@
     {
       "name": "Sveltekit",
       "icon": "/portfolio/assets/svelte-kit.svg",
-      "category": "miscellaneous",
+      "category": "Fullstack",
       "tooltip": "",
       "link": "https://kit.svelte.dev/"
     },
@@ -129,9 +136,16 @@
     {
       "name": ".net",
       "icon": "/portfolio/assets/dotnet.svg",
-      "category": "currently learning",
+      "category": "Fullstack",
       "tooltip": "",
       "link": "https://dotnet.microsoft.com/"
+    },
+    {
+      "name": "MySQL",
+      "icon": "/portfolio/assets/mysql-icon.svg",
+      "category": "backend",
+      "tooltip": "",
+      "link": "https://www.mysql.com/"
     }
   ]
 }
