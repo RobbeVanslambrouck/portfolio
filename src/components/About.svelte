@@ -22,9 +22,8 @@
   <div id="content">
     <img src={mugshot} alt="selfie" />
     <p>
-      Hi, my name is Robbe Vanslambrouck and I am a self taught front-end
-      developer with a passion for learning new skills. I am currently available
-      for hire.
+      Hi, my name is Robbe Vanslambrouck and I am a web developer developer with
+      a passion for learning new skills. I am currently available for hire.
     </p>
   </div>
 </section>
